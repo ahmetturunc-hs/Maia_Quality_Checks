@@ -119,11 +119,17 @@ The following are examples of contexts at the pass/fail boundary. Study them to 
 
 ## Output Format
 
-Return ONLY valid JSON:
+Return a single paragraph. Begin with the verdict word `PASSED` or `FAILED` followed by a colon, then the feedback as plain prose.
 
-```json
-{
-  "verdict": "passed" | "failed",
-  "feedback": "<one paragraph: for passes, 2 sentences explaining what makes the context strong; for failures, 3-5 sentences naming the quality areas with issues and pointing at the type of problem>"
-}
+For passes: 2 sentences explaining what makes the context strong.
+For failures: 3-5 sentences naming the quality areas with issues and pointing at the type of problem. Do not exceed one paragraph.
+
+Example shape:
+
+```
+PASSED: <two sentences naming what makes the context strong>
+```
+
+```
+FAILED: <three to five sentences naming the quality areas with issues and pointing at the type of problem, without prescribing the fix>
 ```
