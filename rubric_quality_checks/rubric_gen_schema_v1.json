@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "element": {
+        "type": "object",
+        "properties": {
+          "Criterion": {
+            "type": "string"
+          },
+          "Weight": {
+            "type": "number",
+            "min": -100,
+            "minInclusive": true,
+            "max": 100,
+            "maxInclusive": true
+          },
+          "Implicit or Explicit": {
+            "type": "number",
+            "min": 0,
+            "minInclusive": true,
+            "max": 1,
+            "maxInclusive": true
+          },
+          "Category": {
+            "type": "number",
+            "min": 0,
+            "minInclusive": true,
+            "max": 3,
+            "maxInclusive": true
+          },
+          "Verification Type": {
+            "type": "number",
+            "min": 0,
+            "minInclusive": true,
+            "max": 1,
+            "maxInclusive": true
+          },
+          "Rationale": {
+            "type": "string"
+          },
+          "Citation": {
+            "type": "string",
+            "isOptional": true
+          }
+        }
+      },
+      "minLength": 30,
+      "maxLength": 45
+    }
+  }
+}
