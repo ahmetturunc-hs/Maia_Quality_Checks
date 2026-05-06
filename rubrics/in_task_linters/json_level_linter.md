@@ -18,7 +18,7 @@ When citing items in your output, use 1-based positions (`item 1` = first criter
 
 ## Checks
 
-Run all four checks below across the entire rubric.
+Run all five checks below across the entire rubric.
 
 ### 1. Negative direction matches phrasing
 
@@ -64,6 +64,18 @@ The `rationale` for each criterion must support what the criterion actually chec
   - Example bad: criterion checking a numeric value with rationale that just restates the criterion verbatim with no justification.
   - Example good: criterion "FY2024 revenue is $3,055.555M" with rationale "This is the FY2024 reported total revenue in the provided financial statements."
 
+### 5. Category distribution
+
+Count the category of each criterion across the full rubric. The distribution should fall within these target ranges:
+
+- **Reasoning**: at least 50%
+- **Instruction Following**: no more than 40%
+- **Extraction**: 5–10%
+- **Formatting**: 2–5%
+
+- **PASS**: All categories fall within the target ranges, OR the deviation is clearly justified by the task type (e.g., no input files → 0% Extraction is acceptable; a purely procedural prompt may legitimately push IF above 40%).
+- **FAIL**: One or more categories fall outside their target range without a clear task-type justification. Report the actual distribution (e.g., "Reasoning 30%, IF 62%, Extraction 5%, Formatting 3%") and flag which categories are out of range.
+
 ## Output Format
 
 Do reasoning silently. Do NOT emit scratch work, intermediate analysis, or value verification. Return ONLY valid JSON in this exact shape:
@@ -73,7 +85,7 @@ Do reasoning silently. Do NOT emit scratch work, intermediate analysis, or value
   "passed": true | false,
   "failures": [
     {
-      "check": "Negative direction" | "Category validity" | "Implicit vs explicit tagging" | "Rationale alignment",
+      "check": "Negative direction" | "Category validity" | "Implicit vs explicit tagging" | "Rationale alignment" | "Category distribution",
       "items": [<1-based item positions>],
       "reason": "<one-sentence explanation pointing at the specific problem>",
       "fix_recommendation": "<one short sentence pointing at the direction of the fix; not prescriptive>"
@@ -97,6 +109,7 @@ Fix-recommendation examples by check:
 - **Category validity**: "Reconsider the category — see the Reasoning vs Extraction guidance."
 - **Implicit vs explicit tagging**: "Switch to `implicit` since the prompt does not specify this exact value."
 - **Rationale alignment**: "Rewrite the rationale so it explains why this criterion matters for the task."
+- **Category distribution**: "Rebalance by reclassifying over-represented categories — e.g., IF criteria that test derived conclusions should be Reasoning."
 
 `summary` scale (pick one based on count and severity):
 - **0 failures** → `"Looks good — no fixes needed."`
