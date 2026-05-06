@@ -58,6 +58,8 @@ A task is `✅ Passed all checks` only when every applicable check is PASS or N/
 | C2 | Weight distribution spread | X/N | X% |
 | C3 | Similar criteria, similar weights | X/N | X% |
 | C4 | Negative criteria narrowly scoped | X/N (Y N/A) | X% |
+| C5 | Category distribution | X/N | X% |
+| C6 | Trivial IF weight | X/N (Y N/A) | X% |
 
 ## Notable patterns
 - 3–6 bullets describing patterns observed across the dataset.
@@ -267,6 +269,29 @@ When negative criteria exist, each one must target a concrete, identifiable fail
 - **PASS**: Every negative criterion names a specific failure mode (e.g., "contains TBD or TODO", "cites an external source", "includes payment dates outside the 12/06–12/16 window").
 - **FAIL**: List negative items that are vague (e.g., "has errors", "is incorrect", "is unprofessional").
 
+### C5. Category distribution
+
+The rubric's criteria should be distributed across categories within these target ranges:
+- **Reasoning**: at least 50% of criteria
+- **Instruction Following**: no more than 40% of criteria
+- **Extraction**: 5–10% of criteria
+- **Formatting**: 2–5% of criteria
+
+Count all criteria (positive and negative) when computing percentages.
+
+- **PASS**: All four categories fall within their target ranges, OR the deviation is clearly justified by the task type (e.g., a prompt with no input files may have 0% Extraction; a purely procedural prompt may legitimately push IF above 40%).
+- **FAIL**: One or more categories fall outside their target range without a clear task-type justification. Report the actual distribution (e.g., "Reasoning 30%, IF 62%, Extraction 5%, Formatting 3%") and flag which categories are out of range.
+
+### C6. Trivial instruction following weight
+
+Trivial Instruction Following criteria — those that any model reading the prompt would almost certainly get right, requiring no reasoning, no domain knowledge, and no judgment — must be weighted in the 10–30 range. Examples of trivial criteria: file format checks ("the response is a PDF"), artifact count checks ("the response outputs exactly 3 files"), and self-evident output presence checks ("the deliverable includes a title page").
+
+The test: if a model would have to actively ignore the prompt to fail this criterion, it is trivial.
+
+- **N/A**: Rubric has no Instruction Following criteria that are clearly trivial.
+- **PASS**: All trivial Instruction Following criteria are weighted between 10 and 30.
+- **FAIL**: List trivial Instruction Following criteria weighted above 30 (e.g., item 3 "The response is a PDF file" weighted 80).
+
 ---
 
 ## Procedure
@@ -276,6 +301,6 @@ When negative criteria exist, each one must target a concrete, identifiable fail
 3. For each task folder:
    1. Load `rubric/rubric.json`, `prompt/prompt.txt`, and every file under `input-files/`.
    2. If JSON parsing fails, mark only B5 as FAIL and treat all other checks as not run for that task.
-   3. Otherwise, run checks in order: A1 → A9, B1 → B6, C1 → C4. Collect the list of FAIL / N/A check IDs for this task.
+   3. Otherwise, run checks in order: A1 → A9, B1 → B6, C1 → C6. Collect the list of FAIL / N/A check IDs for this task.
 4. After processing every task, write the two report files described under "Output format" into `results-vN/`. Do not print check-by-check results to the conversation; the report files are the output.
 5. Send the user a one-line confirmation with the path to `results-vN/` and a one-sentence headline (e.g., total tasks evaluated, how many passed all checks).
