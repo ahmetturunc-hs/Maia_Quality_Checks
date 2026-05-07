@@ -1,0 +1,499 @@
+{
+  "items": [
+    {
+      "Criterion": "The DMAIC report is provided as a PDF file.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires a PDF output for the DMAIC report.",
+      "Citation": "TASK_PROMPT: 'recommend an action plan to reduce defects across the plant in a pdf output'"
+    },
+    {
+      "Criterion": "The DMAIC report is between 4 and 7 pages in length.",
+      "Weight": 50,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly constrains the DMAIC report to 4-7 pages. Violating this renders the deliverable non-compliant.",
+      "Citation": "TASK_PROMPT: 'Keep the DMAIC report within 4 to 7 pages'"
+    },
+    {
+      "Criterion": "The annotated process flow map is provided as a PNG file.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires the annotated process flow map to be delivered as a PNG.",
+      "Citation": "TASK_PROMPT: 'provided the annotated process flow map as a png'"
+    },
+    {
+      "Criterion": "The updated Pareto charts are provided in PNG format.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires updated Pareto charts, if any, to be in PNG format.",
+      "Citation": "TASK_PROMPT: 'The updated pareto charts (if any) must be provided in png format as well'"
+    },
+    {
+      "Criterion": "The DMAIC report includes a Define phase section.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires use of the DMAIC method, and Define is the first required phase of DMAIC.",
+      "Citation": "TASK_PROMPT: 'Please use the DMAIC method to analyze the data'"
+    },
+    {
+      "Criterion": "The DMAIC report includes a Measure phase section.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires use of the DMAIC method, and Measure is a required phase of DMAIC.",
+      "Citation": "TASK_PROMPT: 'Please use the DMAIC method to analyze the data'"
+    },
+    {
+      "Criterion": "The DMAIC report includes an Analyze phase section.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires use of the DMAIC method, and Analyze is a required phase of DMAIC.",
+      "Citation": "TASK_PROMPT: 'Please use the DMAIC method to analyze the data'"
+    },
+    {
+      "Criterion": "The DMAIC report includes an Improve phase section.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires use of the DMAIC method, and Improve is a required phase of DMAIC.",
+      "Citation": "TASK_PROMPT: 'Please use the DMAIC method to analyze the data'"
+    },
+    {
+      "Criterion": "The DMAIC report includes a Control phase section.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires use of the DMAIC method, and Control is a required phase of DMAIC.",
+      "Citation": "TASK_PROMPT: 'Please use the DMAIC method to analyze the data'"
+    },
+    {
+      "Criterion": "The DMAIC report identifies exactly 5 root causes.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires identification of the top 5 root causes.",
+      "Citation": "TASK_PROMPT: 'identify the top 5 root causes'"
+    },
+    {
+      "Criterion": "The DMAIC report includes between 3 and 5 quick wins for immediate action.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires 3 to 5 quick wins. Fewer than 3 or more than 5 is non-compliant.",
+      "Citation": "TASK_PROMPT: 'recommend 3 to 5 quick wins for immediate action'"
+    },
+    {
+      "Criterion": "The DMAIC report includes a 90-day action plan.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires a 90-day action plan as a named deliverable element.",
+      "Citation": "TASK_PROMPT: 'detail a 90-day action plan'"
+    },
+    {
+      "Criterion": "The 90-day action plan includes named owners for each action item.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires owners to be specified in the 90-day action plan.",
+      "Citation": "TASK_PROMPT: 'detail a 90-day action plan with owners, milestones, required resources, and acceptance criteria'"
+    },
+    {
+      "Criterion": "The 90-day action plan includes milestones.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires milestones in the 90-day action plan.",
+      "Citation": "TASK_PROMPT: 'detail a 90-day action plan with owners, milestones, required resources, and acceptance criteria'"
+    },
+    {
+      "Criterion": "The 90-day action plan includes required resources for each action item.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires required resources to be detailed in the 90-day action plan.",
+      "Citation": "TASK_PROMPT: 'detail a 90-day action plan with owners, milestones, required resources, and acceptance criteria'"
+    },
+    {
+      "Criterion": "The 90-day action plan includes acceptance criteria for each action item.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires acceptance criteria in the 90-day action plan.",
+      "Citation": "TASK_PROMPT: 'detail a 90-day action plan with owners, milestones, required resources, and acceptance criteria'"
+    },
+    {
+      "Criterion": "Each recommendation in the DMAIC report includes an estimated scrap reduction.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires recommendations to include estimated scrap reduction figures.",
+      "Citation": "TASK_PROMPT: 'Recommendations must be data-backed and include estimated scrap reduction and implementation cost or resource estimate'"
+    },
+    {
+      "Criterion": "Each recommendation in the DMAIC report includes an implementation cost or resource estimate.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires recommendations to include implementation cost or resource estimates.",
+      "Citation": "TASK_PROMPT: 'Recommendations must be data-backed and include estimated scrap reduction and implementation cost or resource estimate'"
+    },
+    {
+      "Criterion": "The DMAIC report states the current defect or scrap rate as 40%.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states the defect/scrap rate is 40% over the past 3 months; the report must reference this baseline to establish scope.",
+      "Citation": "TASK_PROMPT: 'There has been a 40% defect/scrap rate for the past 3 months'"
+    },
+    {
+      "Criterion": "The DMAIC report states a target of reducing defects by 20% over the next quarter.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states the goal of a 20% reduction over the next quarter; the report must reflect this target.",
+      "Citation": "TASK_PROMPT: 'reduce by 20% over the next quarter'"
+    },
+    {
+      "Criterion": "The Define phase includes a problem statement that references the 40% defect or scrap rate.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "DMAIC best practice requires the Define phase to contain a clear problem statement that quantifies the current-state defect rate. A Define section that omits the baseline metric is incomplete.",
+      "Citation": "Domain knowledge: DMAIC Define phase standard content"
+    },
+    {
+      "Criterion": "The Define phase identifies the project scope as an electronics manufacturing assembly plant.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "DMAIC best practice requires the Define phase to scope the improvement effort. The report should reflect the plant context stated in the prompt.",
+      "Citation": "TASK_PROMPT: 'electronics manufacturing assembly plant'"
+    },
+    {
+      "Criterion": "The Measure phase references or summarizes data from the 3-month period.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "DMAIC Measure phase must ground the baseline in quantitative data over the period under review. The report should demonstrate that 3 months of defect data was considered.",
+      "Citation": "TASK_PROMPT: 'pareto analysis of the previous 3 months' and 'defect_log_3months.xlsx'"
+    },
+    {
+      "Criterion": "The Measure phase includes or references a Pareto analysis of defect types.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt provides Pareto analysis data as input; DMAIC Measure/Analyze phases must incorporate this data to establish defect frequency distribution.",
+      "Citation": "TASK_PROMPT: 'pareto analysis of the previous 3 months in a file called 3mos_pareto.pptx'"
+    },
+    {
+      "Criterion": "The Analyze phase includes at least one structured root cause analysis technique (such as fishbone, 5 Whys, or fault tree).",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "DMAIC Analyze phase requires a formal root cause analysis methodology. Listing causes without an analytical framework does not meet professional DMAIC standards.",
+      "Citation": "Domain knowledge: DMAIC Analyze phase standard content"
+    },
+    {
+      "Criterion": "Each of the 5 identified root causes is linked to at least one supporting data point or evidence from the available defect data.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires recommendations to be data-backed; this same standard applies to root causes identified in the Analyze phase.",
+      "Citation": "TASK_PROMPT: 'Recommendations must be data-backed'"
+    },
+    {
+      "Criterion": "The root causes identified span at least two distinct manufacturing process categories (such as materials, machine, method, man, or environment).",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A professionally credible root cause analysis for a 40% defect rate in electronics manufacturing must consider multiple cause categories; single-category root cause lists indicate incomplete analysis.",
+      "Citation": "Domain knowledge: 5M+1E framework for manufacturing root cause analysis"
+    },
+    {
+      "Criterion": "The Improve phase contains the 90-day action plan.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In DMAIC, implementation actions and improvement plans belong in the Improve phase. Placing the action plan in a different section indicates structural misunderstanding of the methodology.",
+      "Citation": "Domain knowledge: DMAIC Improve phase standard content"
+    },
+    {
+      "Criterion": "The quick wins recommended are distinct from the long-term 90-day action plan items.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt distinguishes immediate quick wins from the structured 90-day plan; a report that lists the same items in both sections does not reflect the intended two-tier improvement approach.",
+      "Citation": "TASK_PROMPT: 'recommend 3 to 5 quick wins for immediate action and detail a 90-day action plan'"
+    },
+    {
+      "Criterion": "Each quick win is described with sufficient specificity to be actionable (naming the process area, action, or metric to be affected).",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Quick wins that are vague (generic statements like 'improve quality') cannot serve as actionable guidance. Professional industrial engineering reports require specificity.",
+      "Citation": "Domain knowledge: manufacturing action plan specificity standards"
+    },
+    {
+      "Criterion": "The 90-day action plan milestones are distributed across at least two distinct time intervals within the 90-day window.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A single milestone at day 90 does not constitute a useful action plan; professional 90-day plans phase milestones across the timeline to allow progress tracking.",
+      "Citation": "Domain knowledge: 90-day action plan structuring"
+    },
+    {
+      "Criterion": "The estimated scrap reductions attributed to recommendations are internally consistent (individual root cause reductions do not sum to more than the total 40% baseline defect rate).",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "If individual root cause savings exceed the total defect baseline, the estimates are arithmetically invalid. A credible industrial engineering report must maintain this consistency.",
+      "Citation": "TASK_PROMPT: '40% defect/scrap rate'; 'estimated scrap reduction'"
+    },
+    {
+      "Criterion": "The total estimated scrap reduction from all recommended actions is projected to meet or exceed the 20% reduction target.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The goal is a 20% defect reduction. A credible action plan must demonstrate that the proposed actions are sufficient to reach the stated target.",
+      "Citation": "TASK_PROMPT: 'reduce by 20% over the next quarter'"
+    },
+    {
+      "Criterion": "The Control phase includes at least one mechanism for monitoring defect rates after implementation (such as control charts, regular audits, or SPC).",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "DMAIC Control phase must define a monitoring system to sustain gains. Omitting this makes the plan incomplete as a DMAIC deliverable.",
+      "Citation": "Domain knowledge: DMAIC Control phase standard content"
+    },
+    {
+      "Criterion": "The Control phase defines what will trigger escalation or re-analysis if defect rates do not improve.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A complete DMAIC Control plan must specify response plans for when the process deviates from targets, not only monitoring mechanisms.",
+      "Citation": "Domain knowledge: DMAIC Control response plan"
+    },
+    {
+      "Criterion": "The annotated process flow map PNG includes visible annotations or markings indicating where improvements are recommended.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 1,
+      "Rationale": "The prompt requires the process flow map to be annotated with recommendations; a plain, unmodified flowchart does not satisfy this requirement.",
+      "Citation": "TASK_PROMPT: 'Annotate the process flow map (found in defect_log_3months.xlsx) with recommendations'"
+    },
+    {
+      "Criterion": "The annotations on the process flow map PNG correspond to actions or root causes discussed in the DMAIC report.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 1,
+      "Rationale": "The annotated flow map and the DMAIC report must be consistent; annotations that reference items absent from the report indicate a disconnect between artifacts.",
+      "Citation": "TASK_PROMPT: 'Annotate the process flow map ... with recommendations'; multi-artifact tie-out requirement"
+    },
+    {
+      "Criterion": "The Pareto chart PNG (if provided) reflects the defect categories analyzed in the DMAIC report.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 1,
+      "Rationale": "If updated Pareto charts are provided, they must be consistent with the defect analysis presented in the DMAIC report. Mismatched categories indicate inconsistency between artifacts.",
+      "Citation": "TASK_PROMPT: 'update the pareto charts if needed'"
+    },
+    {
+      "Criterion": "The X-ray image finding (from XRY-01_PCB-E_U5.png) is referenced or discussed in the DMAIC report.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt provides the X-ray image as one of the three inputs to be used; failure to incorporate X-ray findings means the analysis is incomplete.",
+      "Citation": "TASK_PROMPT: 'an image from Xray XRY-01_PCB-E_U5.png'"
+    },
+    {
+      "Criterion": "The DMAIC report references findings derived from the defect log as a basis for root cause analysis or recommendations.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The defect_log_3months.xlsx is a primary input; any DMAIC analysis that does not draw from the defect log is not data-backed as required.",
+      "Citation": "TASK_PROMPT: 'defect_log_3months.xlsx'"
+    },
+    {
+      "Criterion": "The DMAIC report references findings from the Pareto analysis as a basis for root cause prioritization.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The 3mos_pareto.pptx is a primary input; a DMAIC report that ignores the Pareto analysis is not using all provided data as required.",
+      "Citation": "TASK_PROMPT: 'pareto analysis of the previous 3 months in a file called 3mos_pareto.pptx'"
+    },
+    {
+      "Criterion": "The root causes identified are plausible for PCB or electronics assembly manufacturing (such as solder defects, component misplacement, process parameter drift, or material quality issues).",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Domain-appropriate root causes are required for an electronics manufacturing context; generic or non-manufacturing causes indicate insufficient domain knowledge.",
+      "Citation": "TASK_PROMPT: 'electronics manufacturing assembly plant'"
+    },
+    {
+      "Criterion": "The quick wins identified are realistically achievable within a timeframe shorter than 90 days.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Quick wins by definition are immediate actions distinguishable from the 90-day plan; recommending actions that require months of preparation as quick wins is logically inconsistent.",
+      "Citation": "TASK_PROMPT: 'quick wins for immediate action'"
+    },
+    {
+      "Criterion": "The DMAIC report quantifies the current defect period as 3 months.",
+      "Weight": 40,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "The prompt specifies the analysis covers 3 months of defect history; the report must reflect this timeframe to correctly frame the problem scope.",
+      "Citation": "TASK_PROMPT: 'the past 3 months'"
+    },
+    {
+      "Criterion": "The DMAIC report does not recommend actions that contradict the data presented in the Analyze phase.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Internal consistency requires that improvement actions in the Improve phase address the root causes identified in the Analyze phase; recommending unrelated actions undermines the DMAIC logic chain.",
+      "Citation": "Domain knowledge: DMAIC internal consistency requirement"
+    },
+    {
+      "Criterion": "The DMAIC report does not contain placeholder text such as TBD, TODO, or INSERT DATA HERE.",
+      "Weight": -60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Placeholder text indicates an incomplete deliverable that would be professionally unusable as an action plan submission to a manager.",
+      "Citation": "Domain knowledge: professional deliverable completeness standard"
+    },
+    {
+      "Criterion": "The annotated process flow map is visually readable with process steps distinguishable from annotation markers.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 1,
+      "Rationale": "An annotated process flow map in which annotations obscure the original process steps is unusable as an engineering communication tool.",
+      "Citation": "Domain knowledge: engineering diagram readability standards"
+    },
+    {
+      "Criterion": "The DMAIC report includes a summary table or structured list for the 90-day action plan rather than presenting it in unstructured prose only.",
+      "Weight": 50,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A 90-day action plan with owners, milestones, resources, and acceptance criteria requires a structured format to be useful and scannable; prose paragraphs make cross-referencing owners to milestones impractical.",
+      "Citation": "Domain knowledge: action plan formatting standard"
+    },
+    {
+      "Criterion": "The DMAIC report uses section headers that clearly identify each phase of the DMAIC framework.",
+      "Weight": 40,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A DMAIC report without clearly labeled phase headers does not allow a reader to navigate the document or verify that all phases are addressed.",
+      "Citation": "Domain knowledge: DMAIC report formatting standard"
+    },
+    {
+      "Criterion": "The implementation cost or resource estimates in the DMAIC report are differentiated by action item rather than presented as a single aggregate figure.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Action-level cost estimates allow prioritization and budget planning; a single aggregate figure does not support owner-level resource planning required by the action plan structure.",
+      "Citation": "TASK_PROMPT: 'implementation cost or resource estimate'"
+    },
+    {
+      "Criterion": "The DMAIC report does not state that the defect reduction target will be achieved without providing supporting data or estimates.",
+      "Weight": -50,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Asserting goal achievement without quantitative backing violates the data-backed requirement; this failure mode is distinct from the positive criterion requiring supporting estimates.",
+      "Citation": "TASK_PROMPT: 'Recommendations must be data-backed'"
+    },
+    {
+      "Criterion": "The acceptance criteria in the 90-day action plan are measurable (include numeric thresholds, defect rates, or testable conditions) rather than subjective statements.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Acceptance criteria that cannot be objectively verified (such as 'improve quality significantly') cannot function as completion gates in a professional action plan.",
+      "Citation": "Domain knowledge: acceptance criteria standards for manufacturing action plans"
+    },
+    {
+      "Criterion": "The Measure phase includes at least one quantitative metric beyond the overall defect rate (such as defects per unit, defect rate by product type, or defect rate by process step).",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "DMAIC Measure phase must disaggregate the defect metric to enable root cause analysis; reporting only the 40% aggregate rate does not provide the granularity needed for the Analyze phase.",
+      "Citation": "Domain knowledge: DMAIC Measure phase disaggregation requirement"
+    },
+    {
+      "Criterion": "The DMAIC report's Improve or Control phase addresses how the gains will be sustained after the 90-day plan concludes.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Sustainability is a core DMAIC Control phase requirement; a report that addresses only initial implementation without a sustainability mechanism is incomplete.",
+      "Citation": "Domain knowledge: DMAIC Control phase sustainability requirement"
+    },
+    {
+      "Criterion": "The three delivered artifacts (DMAIC PDF report, annotated process flow map PNG, and Pareto chart PNG) are all present in the response.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires all three artifact types; a response missing any one of them is incomplete.",
+      "Citation": "TASK_PROMPT: 'pdf output', 'annotated process flow map as a png', 'updated pareto charts ... in png format'"
+    }
+  ]
+}

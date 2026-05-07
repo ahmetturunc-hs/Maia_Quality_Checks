@@ -1,0 +1,490 @@
+{
+  "items": [
+    {
+      "Criterion": "The remediation package includes React component code that addresses accessibility barriers in the permit portal frontend.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires remediated React component code as a primary deliverable. Absence makes the package unusable.",
+      "Citation": "TASK_PROMPT: 'Deliver remediated React component code'"
+    },
+    {
+      "Criterion": "The remediation package includes reusable accessibility hooks or utilities.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires reusable accessibility hooks or utilities as a named deliverable.",
+      "Citation": "TASK_PROMPT: 'reusable accessibility hooks or utilities where helpful'"
+    },
+    {
+      "Criterion": "The remediation package includes CSS or Material UI theme overrides.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires CSS or MUI theme overrides as a named deliverable.",
+      "Citation": "TASK_PROMPT: 'CSS or MUI theme overrides'"
+    },
+    {
+      "Criterion": "The remediation package includes a remediation report as a distinct document or section.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires a remediation report as a named deliverable.",
+      "Citation": "TASK_PROMPT: 'a remediation report'"
+    },
+    {
+      "Criterion": "The remediation report includes a section explaining how each audit finding from Permit_Portal_Accessibility_Audit.pdf was addressed in the delivered code.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the report to cover how each audit finding was addressed in code.",
+      "Citation": "TASK_PROMPT: 'how each audit finding was addressed in the code'"
+    },
+    {
+      "Criterion": "The remediation report includes a section explaining how conflicts between the audit PDF, test results XLSX, and brand standards DOCX were resolved.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the report to cover conflict resolution between the three source files.",
+      "Citation": "TASK_PROMPT: 'how conflicts between the three files were resolved'"
+    },
+    {
+      "Criterion": "The remediation report identifies which automated axe-core scan results were determined to be false positives and provides reasoning for each.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the report to cover false positive determinations and reasoning.",
+      "Citation": "TASK_PROMPT: 'which automated scan results were determined to be false positives and the reasoning'"
+    },
+    {
+      "Criterion": "The remediation report documents assumptions made for audit findings or test issues that were left unresolved or open.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the report to state assumptions for open items.",
+      "Citation": "TASK_PROMPT: 'what assumptions were made for anything left open'"
+    },
+    {
+      "Criterion": "The remediation report includes a manual test plan for keyboard navigation verification.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires a manual test plan covering keyboard verification.",
+      "Citation": "TASK_PROMPT: 'a manual test plan for keyboard and screen reader verification'"
+    },
+    {
+      "Criterion": "The remediation report includes a manual test plan for screen reader verification.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires a manual test plan covering screen reader verification.",
+      "Citation": "TASK_PROMPT: 'a manual test plan for keyboard and screen reader verification'"
+    },
+    {
+      "Criterion": "The remediation report includes a section on risks that remain before the 90-day deadline.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the report to cover remaining risks before the 90-day deadline.",
+      "Citation": "TASK_PROMPT: 'what risks remain before the 90-day deadline'"
+    },
+    {
+      "Criterion": "The delivered code does not modify backend APIs, database logic, or server-side code.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly prohibits changes to backend APIs, database logic, or server-side code.",
+      "Citation": "TASK_PROMPT: 'Do not change backend APIs, database logic, or server-side code'"
+    },
+    {
+      "Criterion": "The delivered code preserves the permit application submission flow unless the code or report identifies that the audit explicitly flagged that workflow step as inaccessible.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt requires that permit flows keep working unless the audit identified a step as inaccessible. A response must demonstrate this constraint was reasoned about.",
+      "Citation": "TASK_PROMPT: 'permit application flow...should keep working as they do today unless the audit explicitly identifies a workflow step as inaccessible'"
+    },
+    {
+      "Criterion": "The delivered code preserves the inspection scheduling flow unless the code or report identifies that the audit explicitly flagged that workflow step as inaccessible.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Same workflow preservation constraint applied to inspection scheduling.",
+      "Citation": "TASK_PROMPT: 'inspection scheduling...should keep working as they do today unless the audit explicitly identifies a workflow step as inaccessible'"
+    },
+    {
+      "Criterion": "The delivered code preserves the document upload flow unless the code or report identifies that the audit explicitly flagged that workflow step as inaccessible.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Same workflow preservation constraint applied to document upload.",
+      "Citation": "TASK_PROMPT: 'document upload...should keep working as they do today unless the audit explicitly identifies a workflow step as inaccessible'"
+    },
+    {
+      "Criterion": "The delivered code preserves the fee payment flow unless the code or report identifies that the audit explicitly flagged that workflow step as inaccessible.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Same workflow preservation constraint applied to fee payment.",
+      "Citation": "TASK_PROMPT: 'fee payment...should keep working as they do today unless the audit explicitly identifies a workflow step as inaccessible'"
+    },
+    {
+      "Criterion": "The delivered code preserves the permit status tracking flow unless the code or report identifies that the audit explicitly flagged that workflow step as inaccessible.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Same workflow preservation constraint applied to permit status tracking.",
+      "Citation": "TASK_PROMPT: 'permit status tracking...should keep working as they do today unless the audit explicitly identifies a workflow step as inaccessible'"
+    },
+    {
+      "Criterion": "The remediation report distinguishes the fix approach used for standard Material UI components versus custom wrapper components versus third-party package components.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt states the fix approach is different for each component origin type (standard MUI, custom wrappers, third-party), so the response must demonstrate this distinction was applied.",
+      "Citation": "TASK_PROMPT: 'the fix approach is different for each'"
+    },
+    {
+      "Criterion": "When the audit PDF and automated axe-core scan results reach different conclusions about the same component, the remediation report identifies the conflict and explains which source was followed.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt states the sources sometimes disagree and requires the response to choose the accessible version and explain reasoning when conflicts occur.",
+      "Citation": "TASK_PROMPT: 'When the sources conflict or leave something unresolved, choose the accessible version, build it, and explain the reasoning'"
+    },
+    {
+      "Criterion": "When brand standards from City_Portal_Brand_Standards.docx conflict with accessibility requirements, the remediation report explains which took precedence and why.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly notes the audit may flag barriers caused by brand standards and requires resolving such conflicts with explanation.",
+      "Citation": "TASK_PROMPT: 'The audit may flag barriers caused by the brand standards'"
+    },
+    {
+      "Criterion": "The remediated React components include appropriate ARIA roles, labels, or descriptions on interactive elements that were missing them.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA requires all interactive elements to have programmatically determinable names (Success Criterion 4.1.2). A permit portal accessibility remediation must address this for screen reader compatibility.",
+      "Citation": "WCAG 2.1 AA SC 4.1.2; TASK_PROMPT: WCAG 2.1 AA compliance"
+    },
+    {
+      "Criterion": "The remediated React components implement visible keyboard focus indicators on all interactive elements.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.4.7 requires visible focus indicators. The contractor's complaint was about screen reader use, making keyboard focus a core requirement.",
+      "Citation": "WCAG 2.1 AA SC 2.4.7"
+    },
+    {
+      "Criterion": "The remediated code or theme overrides ensure color contrast ratios meet WCAG 2.1 AA minimums of at least 4.5:1 for normal text and 3:1 for large text.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 1.4.3 requires minimum contrast ratios. MUI theme overrides are the correct mechanism and are an explicitly required deliverable.",
+      "Citation": "WCAG 2.1 AA SC 1.4.3"
+    },
+    {
+      "Criterion": "The remediated code associates all form fields in the permit application flow with explicit labels using htmlFor-id pairing or aria-label or aria-labelledby.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 1.3.1 and 4.1.2 require form inputs to have programmatic labels. This is a primary screen reader concern and directly relates to the contractor complaint.",
+      "Citation": "WCAG 2.1 AA SC 1.3.1, 4.1.2"
+    },
+    {
+      "Criterion": "The remediated code ensures that error messages in forms are programmatically associated with their corresponding fields using aria-describedby or aria-errormessage.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 3.3.1 and 3.3.3 require that error messages be identifiable and descriptive. Screen reader users cannot perceive visually placed error text without programmatic association.",
+      "Citation": "WCAG 2.1 AA SC 3.3.1, 3.3.3"
+    },
+    {
+      "Criterion": "The remediated code includes skip navigation links or equivalent mechanisms to allow keyboard users to bypass repetitive navigation blocks.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.4.1 requires a mechanism to skip repeated navigation blocks. This is a standard requirement for portal applications with persistent navigation.",
+      "Citation": "WCAG 2.1 AA SC 2.4.1"
+    },
+    {
+      "Criterion": "The remediated code ensures that modal dialogs or overlays trap keyboard focus within the dialog while open and return focus to the trigger element when closed.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.4.3 and ARIA authoring practices require focus management for modal dialogs. MUI dialogs in custom wrappers often break this pattern.",
+      "Citation": "WCAG 2.1 AA SC 2.4.3; ARIA Authoring Practices"
+    },
+    {
+      "Criterion": "The remediated code ensures that dynamic content updates such as status changes or submission confirmations are announced to screen readers using aria-live regions or role='alert'.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 4.1.3 requires status messages to be programmatically determinable. Portal status updates and submission feedback require live region announcements.",
+      "Citation": "WCAG 2.1 AA SC 4.1.3"
+    },
+    {
+      "Criterion": "The remediated code ensures that all images, icons, and non-text visual elements that convey information have appropriate text alternatives.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 1.1.1 requires non-text content to have text alternatives. Decorative icons must have aria-hidden='true' while informative icons need alt text or aria-label.",
+      "Citation": "WCAG 2.1 AA SC 1.1.1"
+    },
+    {
+      "Criterion": "The remediated code ensures that all interactive elements are operable via keyboard alone without requiring mouse interaction.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.1.1 requires all functionality to be available via keyboard. The contractor complaint was specifically about being unable to complete a permit application with a screen reader, which relies on keyboard access.",
+      "Citation": "WCAG 2.1 AA SC 2.1.1"
+    },
+    {
+      "Criterion": "The remediated code does not create any keyboard traps where focus becomes stuck and users cannot navigate away using keyboard alone.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.1.2 prohibits keyboard traps. A contractor unable to complete a permit application likely encountered a keyboard trap.",
+      "Citation": "WCAG 2.1 AA SC 2.1.2"
+    },
+    {
+      "Criterion": "The remediated code ensures that the logical reading order of page content matches the visual order in the DOM structure.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 1.3.2 requires that the meaningful sequence of content is preserved in the DOM. Screen readers traverse the DOM order, so visual and DOM order mismatches cause confusion.",
+      "Citation": "WCAG 2.1 AA SC 1.3.2"
+    },
+    {
+      "Criterion": "The remediated code uses semantic HTML elements (such as button, nav, main, header, h1-h6, or fieldset with legend) rather than generic div or span elements for structural roles.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 4.1.1 and 1.3.1 require correct use of semantics. Semantic HTML is foundational for screen reader compatibility in React applications.",
+      "Citation": "WCAG 2.1 AA SC 4.1.1, 1.3.1"
+    },
+    {
+      "Criterion": "The remediated code ensures that page titles are descriptive and reflect the current section or workflow step.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.4.2 requires descriptive page titles. In a multi-step permit portal, step-specific titles are important for screen reader orientation.",
+      "Citation": "WCAG 2.1 AA SC 2.4.2"
+    },
+    {
+      "Criterion": "The reusable accessibility hooks or utilities address at least one of the following patterns: focus management, live region announcements, or keyboard event handling.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt requires hooks 'where helpful'. For a permit portal WCAG remediation, focus management, live regions, and keyboard handling are the canonical hook patterns that reduce duplication across components.",
+      "Citation": "TASK_PROMPT: 'reusable accessibility hooks or utilities where helpful'"
+    },
+    {
+      "Criterion": "The MUI theme overrides configure the focus-visible style to provide a visible, high-contrast focus ring rather than relying solely on the browser default outline.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "MUI themes often suppress the default focus outline globally. A WCAG 2.1 AA remediation must restore visible focus via theme to satisfy SC 2.4.7 across all MUI components.",
+      "Citation": "WCAG 2.1 AA SC 2.4.7"
+    },
+    {
+      "Criterion": "The remediation report explains the reasoning for any conflict where the accessible resolution choice is inconsistent with City_Portal_Brand_Standards.docx visual identity requirements.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt states the audit may flag barriers caused by brand standards and requires choosing the accessible version with explained reasoning.",
+      "Citation": "TASK_PROMPT: 'choose the accessible version, build it, and explain the reasoning'"
+    },
+    {
+      "Criterion": "The remediation report's manual test plan specifies which screen readers and browsers should be used for verification testing.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A professional accessibility manual test plan must specify the screen reader and browser combinations to be tested, as behavior varies substantially between NVDA, JAWS, and VoiceOver on different browsers.",
+      "Citation": "TASK_PROMPT: 'a manual test plan for keyboard and screen reader verification'"
+    },
+    {
+      "Criterion": "The manual test plan in the remediation report includes test cases for the permit application submission workflow.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The permit application flow is named explicitly in the task prompt and is the origin of the contractor complaint, making it a priority test target for the manual test plan.",
+      "Citation": "TASK_PROMPT: 'permit application flow'; 'a licensed general contractor...was unable to complete a building permit application with his screen reader'"
+    },
+    {
+      "Criterion": "The remediation report identifies risks that could prevent full WCAG 2.1 AA compliance within 90 days, such as third-party component limitations or unresolved open questions from the audit.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt requires risks remaining before the 90-day deadline to be called out, and the context of third-party components and open audit questions are specifically mentioned as potential complicating factors.",
+      "Citation": "TASK_PROMPT: 'what risks remain before the 90-day deadline'; 'open questions'"
+    },
+    {
+      "Criterion": "The remediation report connects each addressed audit finding to a specific code change or file in the delivered remediation package.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt requires the report to explain 'how each audit finding was addressed in the code', implying a traceable link between findings and specific code artifacts rather than vague descriptions.",
+      "Citation": "TASK_PROMPT: 'how each audit finding was addressed in the code'"
+    },
+    {
+      "Criterion": "The code in the remediation package is consistent with the claims made in the remediation report about what was fixed.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The deliverable has multiple artifacts (code plus report). Claims in the report about fixes must be verifiable in the delivered code. Mismatches indicate incomplete work.",
+      "Citation": "TASK_PROMPT: multi-artifact deliverable requiring code and report"
+    },
+    {
+      "Criterion": "The manual test plan in the remediation report includes test cases covering keyboard-only navigation through the entire permit portal workflow.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "WCAG 2.1 AA SC 2.1.1 applies to all functionality. The manual test plan must verify keyboard operability for the full workflow, not just isolated components.",
+      "Citation": "WCAG 2.1 AA SC 2.1.1; TASK_PROMPT: 'manual test plan for keyboard and screen reader verification'"
+    },
+    {
+      "Criterion": "The remediated code uses tabIndex='0' on custom interactive elements that need to be keyboard focusable, and avoids positive tabIndex values that disrupt the natural tab order.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Custom React components built with non-interactive elements commonly use tabIndex incorrectly. Positive tabIndex values break the expected tab sequence, which is a common axe-core finding in React portals.",
+      "Citation": "WCAG 2.1 AA SC 2.4.3"
+    },
+    {
+      "Criterion": "The remediated code ensures that file upload components in the document upload flow are keyboard operable and announce accepted file types and status to screen readers.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Document upload is a named workflow in the task prompt. File input components are commonly inaccessible in React portals and require ARIA attributes to communicate accepted formats and upload progress.",
+      "Citation": "TASK_PROMPT: 'document upload'; WCAG 2.1 AA SC 2.1.1, 4.1.3"
+    },
+    {
+      "Criterion": "The remediated code ensures that date picker or calendar components used in inspection scheduling are keyboard operable and communicate selected dates to screen readers.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Inspection scheduling is a named workflow. Date pickers and calendars are among the most commonly inaccessible third-party or custom components in React portals.",
+      "Citation": "TASK_PROMPT: 'inspection scheduling'; WCAG 2.1 AA SC 2.1.1, 4.1.2"
+    },
+    {
+      "Criterion": "The remediated code ensures that fee payment form fields including credit card inputs or payment integration components are labeled and keyboard operable.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Fee payment is a named workflow. Payment form fields often use iframes or third-party components with accessibility gaps that require specific handling.",
+      "Citation": "TASK_PROMPT: 'fee payment'; WCAG 2.1 AA SC 1.3.1, 2.1.1"
+    },
+    {
+      "Criterion": "The remediation report does not claim WCAG 2.1 AAA compliance as a delivered outcome, since the target standard is WCAG 2.1 AA.",
+      "Weight": -30,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt specifies WCAG 2.1 AA as the required compliance level. Claiming AAA compliance would misrepresent the scope and may introduce requirements not achievable within 90 days.",
+      "Citation": "TASK_PROMPT: 'reach WCAG 2.1 AA compliance'"
+    },
+    {
+      "Criterion": "The remediation package contains placeholder text such as TODO or FIXME in delivered code or report sections that indicate incomplete work.",
+      "Weight": -50,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Placeholder text in a deliverable intended for a city legal deadline indicates the remediation is incomplete and professionally unusable.",
+      "Citation": "TASK_PROMPT: deliverable must be a complete remediation package"
+    },
+    {
+      "Criterion": "The remediation report section on false positives provides domain-specific reasoning for each determination rather than blanket assertions that all automated findings in a category are false positives.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Blanket false-positive dismissals are a professional failure mode in accessibility remediation. The task prompt requires per-finding reasoning, and the combined audit plus axe-core approach implies some real findings exist.",
+      "Citation": "TASK_PROMPT: 'which automated scan results were determined to be false positives and the reasoning'"
+    },
+    {
+      "Criterion": "The remediation report uses consistent terminology across its sections, referencing the same component or finding by the same name throughout.",
+      "Weight": 40,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A multi-section remediation report that uses inconsistent component names across the audit findings, false positives, and assumptions sections creates confusion for reviewers tracing issues across sections.",
+      "Citation": "Professional remediation report quality standard"
+    },
+    {
+      "Criterion": "The remediation report organizes content into clearly labeled sections corresponding to the required report topics: audit findings, conflict resolution, false positives, assumptions, manual test plan, and remaining risks.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The task prompt names six distinct required report sections. A clearly structured report with labeled sections allows reviewers to verify each requirement was met.",
+      "Citation": "TASK_PROMPT: remediation report section list"
+    },
+    {
+      "Criterion": "The delivered React component code is organized such that different components or files are identifiable as addressing different parts of the portal rather than being combined into a single undifferentiated file.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A React accessibility remediation package covering multiple portal workflows should deliver separate component files per component or workflow, matching standard React project structure and enabling targeted code review.",
+      "Citation": "TASK_PROMPT: React component code; standard React project conventions"
+    },
+    {
+      "Criterion": "The remediation report's remaining risks section distinguishes between risks that are within the team's control and risks that depend on third-party vendors or brand standards approval.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt describes third-party packages and brand standards as external constraints. A professional risk analysis distinguishes controllable from external risks to help the team prioritize.",
+      "Citation": "TASK_PROMPT: 'what risks remain before the 90-day deadline'; third-party packages; brand standards"
+    }
+  ]
+}

@@ -1,0 +1,499 @@
+{
+  "items": [
+    {
+      "Criterion": "The script reads student data from a file named grades.xlsx as its input source.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly names grades.xlsx as the input file. The script must reference this filename.",
+      "Citation": "Input is grades.xlsx"
+    },
+    {
+      "Criterion": "The model.py script is implemented using PyTorch and does not import any pre-built open-source GNN model library such as torch_geometric, DGL, or similar.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states to generate the model manually using PyTorch and not to import an open-source model.",
+      "Citation": "Generate the model manually using PyTorch. Do not import an open-source model."
+    },
+    {
+      "Criterion": "The model.py script includes an import statement for torch.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "PyTorch is explicitly required as the framework, so torch must be imported in model.py.",
+      "Citation": "Generate the model manually using PyTorch."
+    },
+    {
+      "Criterion": "The script produces a file named requirements.txt as an output.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly names requirements.txt as one of the two required output files alongside model.py.",
+      "Citation": "The output is requirements.txt and model.py."
+    },
+    {
+      "Criterion": "The requirements.txt file includes pinned version numbers for each listed package.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states requirements.txt should contain pinned versions of included packages.",
+      "Citation": "requirements.txt contains the pinned versions of the included packages."
+    },
+    {
+      "Criterion": "The requirements.txt file includes torch as a dependency.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "Since the model uses PyTorch, torch must appear in the requirements.txt with a pinned version.",
+      "Citation": "Generate the model manually using PyTorch."
+    },
+    {
+      "Criterion": "The requirements.txt file includes openpyxl or xlrd as a dependency for reading Excel files.",
+      "Weight": 50,
+      "Implicit or Explicit": 0,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "Reading grades.xlsx requires an Excel parsing library; a complete requirements.txt must list it.",
+      "Citation": "The input is grades.xlsx."
+    },
+    {
+      "Criterion": "The requirements.txt file includes matplotlib or a comparable plotting library as a dependency.",
+      "Weight": 50,
+      "Implicit or Explicit": 0,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "Generating results.pdf with charts requires a plotting library, which must appear in requirements.txt.",
+      "Citation": "The script should output results.pdf which will contain tables, a confusion matrix, and training accuracy data."
+    },
+    {
+      "Criterion": "The script produces a file named results.pdf as an output.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires the script to output results.pdf.",
+      "Citation": "The script should output results.pdf."
+    },
+    {
+      "Criterion": "The results.pdf contains a table of results from the test split.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires results.pdf to include tables of results from the test split.",
+      "Citation": "results.pdf will contain tables of results from the test split."
+    },
+    {
+      "Criterion": "The results.pdf contains a confusion matrix.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires a confusion matrix in the results PDF.",
+      "Citation": "results.pdf will contain a confusion matrix."
+    },
+    {
+      "Criterion": "The results.pdf contains training accuracy data.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires training accuracy data in the results PDF.",
+      "Citation": "results.pdf will contain training accuracy data."
+    },
+    {
+      "Criterion": "The script reads the column named student_id from the input data.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly specifies the column header student_id as part of the dataset structure.",
+      "Citation": "Column headers are student_id, student_name, grade_1, grade_2, grade_3 ..., and label."
+    },
+    {
+      "Criterion": "The script reads the column named label from the input data.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly specifies the label column as a required field in the dataset structure.",
+      "Citation": "Column headers are student_id, student_name, grade_1, grade_2, grade_3 ..., and label."
+    },
+    {
+      "Criterion": "The script reads grade columns named following the pattern grade_1 through grade_10 from the input data.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt specifies up to 10 grade columns named grade_1 through grade_10 as part of the explicit column header specification.",
+      "Citation": "Column headers are student_id, student_name, grade_1, grade_2, grade_3 ..., and label. Each student record will have up to 10 grades."
+    },
+    {
+      "Criterion": "The script replaces missing grade values with the column mean for each grade column.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires missing grades to be replaced with the mean of the grades in that column. This is a data preprocessing step that must be correctly implemented.",
+      "Citation": "Missing grades should be replaced with the mean of the grades in that column."
+    },
+    {
+      "Criterion": "The imputation is computed per column, not globally across all grade columns combined.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt specifies the mean of the grades in that column, meaning each column's missing values must be filled with that column's own mean, not a global average.",
+      "Citation": "Missing grades should be replaced with the mean of the grades in that column."
+    },
+    {
+      "Criterion": "Each student is represented as a node in the graph structure.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states each student is a node, which is a core architectural requirement of the GNN design.",
+      "Citation": "Each student is a node."
+    },
+    {
+      "Criterion": "Edges between student nodes are derived using cosine similarity computed from the students' grades.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states edges should be derived from the dataset based on the student's grades using cosine similarity.",
+      "Citation": "The edges should be derived from the dataset based on the student's grades using cosine similarity."
+    },
+    {
+      "Criterion": "The graph construction code computes cosine similarity between grade vectors for each pair of students.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Cosine similarity between grade feature vectors must be explicitly computed to form the adjacency structure, not just referenced nominally.",
+      "Citation": "The edges should be derived from the dataset based on the student's grades using cosine similarity."
+    },
+    {
+      "Criterion": "The model incorporates a temporal component that models change in grades across time steps rather than treating all grades as static features.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states the temporal aspect of the model is the change in grades over time, making temporal modeling a core architectural requirement.",
+      "Citation": "The temporal aspect of the model is the change in grades over time."
+    },
+    {
+      "Criterion": "The temporal modeling component treats each grade column as a sequential time step, processing them in order from grade_1 to grade_10.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The grades represent a sequence over coursework, so correct temporal modeling requires treating them as ordered steps rather than unordered features.",
+      "Citation": "The temporal aspect of the model is the change in grades over time."
+    },
+    {
+      "Criterion": "The temporal component of the model uses a recurrent structure such as an LSTM, GRU, or explicit sequential processing layer defined manually in PyTorch.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Modeling change in grades over time requires a sequential processing mechanism; a proper temporal GNN integrates recurrent or sequential computation manually implemented in PyTorch.",
+      "Citation": "Generate the model manually using PyTorch. The temporal aspect of the model is the change in grades over time."
+    },
+    {
+      "Criterion": "The GNN implements graph convolution or message-passing operations manually using PyTorch tensor operations rather than calling a pre-built GNN layer from an external library.",
+      "Weight": 90,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt forbids importing an open-source model, so graph convolution must be built from primitives using PyTorch.",
+      "Citation": "Do not import an open-source model."
+    },
+    {
+      "Criterion": "The model's final output for each student includes a predicted label of either pass or fail.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states the resulting labels should be pass or fail.",
+      "Citation": "The resulting labels should be pass or fail with a confidence percentage."
+    },
+    {
+      "Criterion": "The model's final output for each student includes a confidence percentage alongside the pass or fail label.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires a confidence percentage accompanying each pass or fail prediction.",
+      "Citation": "The resulting labels should be pass or fail with a confidence percentage."
+    },
+    {
+      "Criterion": "The confidence percentage is derived from a probability output such as a softmax or sigmoid applied to the model's logits.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A confidence percentage in a binary classification task is conventionally produced by applying softmax or sigmoid to raw logits, which constitutes correct implementation of the output layer.",
+      "Citation": "The resulting labels should be pass or fail with a confidence percentage."
+    },
+    {
+      "Criterion": "The success threshold for the pass label is defined as a final grade above 70%.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states the student success metric is passing the course with a final grade above 70%. This threshold must be reflected in the label logic.",
+      "Citation": "The student success metric is passing the course with a final grade above 70%."
+    },
+    {
+      "Criterion": "The script splits the dataset into a training set and a test set before model training.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires results from the test split, implying a train-test split must be performed. This is standard practice and a prerequisite for valid evaluation.",
+      "Citation": "results.pdf will contain tables of results from the test split."
+    },
+    {
+      "Criterion": "The script trains the model using an optimization loop that updates model parameters over multiple epochs.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Building and training a neural network requires an explicit training loop with gradient-based parameter updates, which is a core requirement for a working model.",
+      "Citation": "Create a Python script that will build and train a Temporal Graph Neural Network."
+    },
+    {
+      "Criterion": "The training loop uses a loss function appropriate for binary classification, such as binary cross-entropy.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Pass/fail classification is a binary classification task; using an appropriate loss function like binary cross-entropy is required for the model to train correctly.",
+      "Citation": "The goal is to predict student success based on their current grades."
+    },
+    {
+      "Criterion": "The training loop tracks and records training accuracy or loss values across epochs.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The results.pdf must contain training accuracy data, which requires the training loop to record per-epoch accuracy or loss for later plotting.",
+      "Citation": "results.pdf will contain training accuracy data."
+    },
+    {
+      "Criterion": "The results.pdf includes a visual plot or chart of training accuracy or loss over training epochs.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 1,
+      "Rationale": "Training accuracy data in a PDF report is conventionally presented as a line chart or similar visualization; a table of epoch values alone is insufficient for professional reporting.",
+      "Citation": "results.pdf will contain training accuracy data."
+    },
+    {
+      "Criterion": "The confusion matrix in results.pdf is a 2x2 matrix reflecting the two classes: pass and fail.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A binary pass/fail classifier produces a 2x2 confusion matrix; a matrix of different dimensions indicates misunderstanding of the classification problem.",
+      "Citation": "results.pdf will contain a confusion matrix."
+    },
+    {
+      "Criterion": "The confusion matrix in results.pdf is computed from predictions on the test split, not the training split.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires tables of results from the test split; a confusion matrix from training data would misrepresent model performance.",
+      "Citation": "results.pdf will contain tables of results from the test split, a confusion matrix."
+    },
+    {
+      "Criterion": "The test results table in results.pdf includes predicted labels for individual students from the test split.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A table of results from the test split should present per-student predictions to be professionally useful and informative.",
+      "Citation": "results.pdf will contain tables of results from the test split."
+    },
+    {
+      "Criterion": "The test results table in results.pdf includes confidence percentages alongside each predicted label.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires pass or fail with a confidence percentage as the output format, which should be reflected in the test results table.",
+      "Citation": "The resulting labels should be pass or fail with a confidence percentage."
+    },
+    {
+      "Criterion": "The model is defined as a class inheriting from torch.nn.Module or implementing a functionally equivalent structure using PyTorch.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Manually building a model in PyTorch following best practices requires defining a module class that encapsulates the network layers and forward pass.",
+      "Citation": "Generate the model manually using PyTorch."
+    },
+    {
+      "Criterion": "The model defines a forward method or equivalent callable that accepts graph-structured input and produces output predictions.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A complete PyTorch model requires a forward method that defines the computation graph from input to output.",
+      "Citation": "Generate the model manually using PyTorch."
+    },
+    {
+      "Criterion": "The adjacency or edge structure is converted to a tensor representation compatible with PyTorch before being passed to the GNN layers.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A manually implemented GNN in PyTorch requires the edge information to be represented as tensors for matrix operations in message passing.",
+      "Citation": "Generate the model manually using PyTorch. Each student is a node and the edges should be derived from the dataset based on the student's grades using cosine similarity."
+    },
+    {
+      "Criterion": "The script handles the case where not all grade columns are filled for every student, supporting partial grade records as described in the prompt.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly states not all grades are filled in to represent various points in the coursework, so the script must handle missing values without crashing.",
+      "Citation": "Not all grades are filled in to represent various points in the coursework."
+    },
+    {
+      "Criterion": "The mean imputation for missing grades is computed only from non-missing values in each column, not including NaN or zero-placeholder values in the average.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Computing a column mean for imputation requires excluding the missing entries themselves; including them would produce an incorrect mean and corrupt the imputed values.",
+      "Citation": "Missing grades should be replaced with the mean of the grades in that column."
+    },
+    {
+      "Criterion": "The script is structured as a complete, executable Python script with no placeholder functions or unimplemented stubs requiring user completion.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A professional deliverable must be a complete, runnable script; stubs or TODO sections render the script non-functional.",
+      "Citation": "Create a Python script that will build and train a Temporal Graph Neural Network."
+    },
+    {
+      "Criterion": "The model.py script does not contain placeholder text such as TODO or FIXME indicating incomplete implementation.",
+      "Weight": -60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Placeholder text signals incomplete work and produces a non-functional deliverable; this negative criterion penalizes such failures.",
+      "Citation": "Create a Python script that will build and train a Temporal Graph Neural Network."
+    },
+    {
+      "Criterion": "The requirements.txt packages listed are consistent with the libraries imported in model.py, with no imported library absent from requirements.txt.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "As a multi-artifact deliverable, requirements.txt and model.py must be consistent: every third-party import in model.py should correspond to a pinned entry in requirements.txt.",
+      "Citation": "The output is requirements.txt and model.py."
+    },
+    {
+      "Criterion": "The pandas library or an equivalent data manipulation library is included in requirements.txt.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "Loading and manipulating tabular data from grades.xlsx requires a data manipulation library; pandas is standard for this purpose and must be listed.",
+      "Citation": "The input is grades.xlsx."
+    },
+    {
+      "Criterion": "The results.pdf is generated programmatically by the script and referenced by filename in the script's output logic.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt states the script should output results.pdf, meaning the PDF must be created by the script itself, not manually.",
+      "Citation": "The script should output results.pdf."
+    },
+    {
+      "Criterion": "The graph message-passing step aggregates neighbor node features using the adjacency structure derived from cosine similarity before applying activation.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A correctly implemented GNN must aggregate information from neighboring nodes using the edge weights or adjacency matrix, which is the core computational step of graph neural networks.",
+      "Citation": "Each student is a node and the edges should be derived from the dataset based on the student's grades using cosine similarity."
+    },
+    {
+      "Criterion": "The combined temporal and graph representations are merged into a single unified embedding before the final classification layer.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A Temporal GNN must combine the temporal sequence representation with the graph neighborhood representation to produce a meaningful final node embedding for classification.",
+      "Citation": "Create a Python script that will build and train a Temporal Graph Neural Network."
+    },
+    {
+      "Criterion": "The script uses an optimizer such as Adam or SGD from torch.optim during training.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Training a PyTorch neural network requires an optimizer to perform gradient descent; using torch.optim is the standard and correct approach.",
+      "Citation": "Create a Python script that will build and train a Temporal Graph Neural Network."
+    },
+    {
+      "Criterion": "The script calls loss.backward() and optimizer.step() within the training loop to update model parameters.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "These are the essential PyTorch calls for backpropagation and parameter updating; their absence means the model does not actually train.",
+      "Citation": "Create a Python script that will build and train a Temporal Graph Neural Network."
+    },
+    {
+      "Criterion": "The results.pdf includes a labeled axes on the training accuracy or loss plot, with one axis representing epochs and another representing the accuracy or loss value.",
+      "Weight": 40,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A professional training curve plot must have labeled axes to be interpretable; unlabeled axes are a formatting deficiency in a PDF report.",
+      "Citation": "results.pdf will contain training accuracy data."
+    },
+    {
+      "Criterion": "The confusion matrix in results.pdf has row or column labels indicating the true class and predicted class dimensions.",
+      "Weight": 40,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A confusion matrix without axis labels indicating true versus predicted classes is ambiguous and professionally unacceptable.",
+      "Citation": "results.pdf will contain a confusion matrix."
+    },
+    {
+      "Criterion": "The script sets the model to evaluation mode before running inference on the test set.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In PyTorch, calling model.eval() before test inference is required to disable dropout and batch normalization training behavior, ensuring correct evaluation results.",
+      "Citation": "results.pdf will contain tables of results from the test split."
+    },
+    {
+      "Criterion": "The script handles the student_name column by excluding it from model features while retaining it for result reporting.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Student names are not numerical features suitable for model input; a correct implementation must exclude student_name from grade feature vectors while potentially including it in result tables.",
+      "Citation": "Column headers are student_id, student_name, grade_1, grade_2, grade_3 ..., and label."
+    }
+  ]
+}

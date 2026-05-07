@@ -1,0 +1,468 @@
+{
+  "items": [
+    {
+      "Criterion": "The thermal report is delivered as a PDF file.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly asks ABC Survey to receive a PDF report.",
+      "Citation": "Provide ABC survey a pdf report"
+    },
+    {
+      "Criterion": "The thermal report identifies the satellite dimensions as 10x10x10 cm.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The satellite is explicitly defined as a 10x10x10 cm CubeSat; the report must reflect this geometry.",
+      "Citation": "small satellite of dimension 10x10x10 cm"
+    },
+    {
+      "Criterion": "The thermal report identifies the orbit type as sun synchronous polar orbit.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The orbit type is a stated constraint that governs all thermal calculations in the report.",
+      "Citation": "sun synchronous polar orbit"
+    },
+    {
+      "Criterion": "The thermal report identifies the launch vehicle as PSLV.",
+      "Weight": 15,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The launch vehicle is a stated parameter that contextualizes the mission profile.",
+      "Citation": "PSLV launch vehicle"
+    },
+    {
+      "Criterion": "The thermal report states that orbital parameters are referenced starting from Day 1 of 2028.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt specifies orbital parameters beginning on Day 1 of 2028, which anchors all temporal analysis.",
+      "Citation": "additional information of the orbital parameters starting from Day 1 of 2028"
+    },
+    {
+      "Criterion": "The thermal report includes parametric equations for incident flux on the +X face of the satellite.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires parametric flux equations for each face; for a 10x10x10 cm cube, all six faces must be covered.",
+      "Citation": "Parametric equations of incident flux [w/m2] at each face of the satellite"
+    },
+    {
+      "Criterion": "The thermal report includes parametric equations for incident flux on the -X face of the satellite.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires parametric flux equations for each face; for a 10x10x10 cm cube, all six faces must be covered.",
+      "Citation": "Parametric equations of incident flux [w/m2] at each face of the satellite"
+    },
+    {
+      "Criterion": "The thermal report includes parametric equations for incident flux on the +Y face of the satellite.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires parametric flux equations for each face; for a 10x10x10 cm cube, all six faces must be covered.",
+      "Citation": "Parametric equations of incident flux [w/m2] at each face of the satellite"
+    },
+    {
+      "Criterion": "The thermal report includes parametric equations for incident flux on the -Y face of the satellite.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires parametric flux equations for each face; for a 10x10x10 cm cube, all six faces must be covered.",
+      "Citation": "Parametric equations of incident flux [w/m2] at each face of the satellite"
+    },
+    {
+      "Criterion": "The thermal report includes parametric equations for incident flux on the +Z face of the satellite.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires parametric flux equations for each face; for a 10x10x10 cm cube, all six faces must be covered.",
+      "Citation": "Parametric equations of incident flux [w/m2] at each face of the satellite"
+    },
+    {
+      "Criterion": "The thermal report includes parametric equations for incident flux on the -Z face of the satellite.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires parametric flux equations for each face; for a 10x10x10 cm cube, all six faces must be covered.",
+      "Citation": "Parametric equations of incident flux [w/m2] at each face of the satellite"
+    },
+    {
+      "Criterion": "The parametric flux equations are expressed in units of W/m2.",
+      "Weight": 50,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly specifies incident flux in W/m2 as the required unit.",
+      "Citation": "Parametric equations of incident flux [w/m2]"
+    },
+    {
+      "Criterion": "The parametric flux equations are expressed as functions of an orbital time or true anomaly parameter T.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt asks for parametric equations of flux, and the subsequent plot requirement confirms T is the independent variable; equations must be explicit functions of T.",
+      "Citation": "incident flux on each face of the satellite vs T"
+    },
+    {
+      "Criterion": "The parametric flux equations account for eclipse periods where incident solar flux drops to zero.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In any low Earth orbit, eclipse is a fundamental boundary condition. Correct parametric equations must include piecewise or eclipse-angle-based terms that zero out solar flux during shadow passages."
+    },
+    {
+      "Criterion": "The parametric flux equations include a solar flux component derived from the solar constant or equivalent direct solar irradiance.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Incident flux on a satellite face in LEO has three components: direct solar, Earth albedo, and Earth infrared. Solar flux from the solar constant is the dominant term and must appear in the equations."
+    },
+    {
+      "Criterion": "The parametric flux equations include an Earth albedo flux component.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Earth albedo is a standard thermal boundary condition for LEO satellites and must be included in any complete parametric flux analysis."
+    },
+    {
+      "Criterion": "The parametric flux equations include an Earth infrared (OLR) flux component.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Earth-emitted infrared (outgoing longwave radiation) is the third standard thermal boundary input for LEO satellites and is required for completeness."
+    },
+    {
+      "Criterion": "The parametric flux equations incorporate the beta angle to determine the illumination geometry relative to the orbit plane.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Beta angle is the angle between the sun vector and the orbit plane and is the fundamental parameter governing which faces are illuminated and for how long in a sun-synchronous orbit."
+    },
+    {
+      "Criterion": "The parametric flux equations use view factors to scale the Earth-emitted and albedo contributions on each face.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "View factors from each satellite face to Earth are required to correctly partition Earth-sourced fluxes in the thermal model; their use in equations is a domain standard."
+    },
+    {
+      "Criterion": "The thermal report includes a plot of incident flux vs T for the worst hot case scenario.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires flux vs T plots for both worst hot and worst cold cases.",
+      "Citation": "incident flux on each face of the satellite vs T for the worst hot case and the worst cold case scenarios"
+    },
+    {
+      "Criterion": "The thermal report includes a plot of incident flux vs T for the worst cold case scenario.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires flux vs T plots for both worst hot and worst cold cases.",
+      "Citation": "incident flux on each face of the satellite vs T for the worst hot case and the worst cold case scenarios"
+    },
+    {
+      "Criterion": "The worst hot case and worst cold case scenarios are selected from across all days in 2028.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires identification of worst cases among all the days in 2028, not just a single representative day.",
+      "Citation": "worst hot case and the worst cold case scenarios among all the days in 2028"
+    },
+    {
+      "Criterion": "The worst hot case is identified as the orbital day or period with maximum total incident flux.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Worst hot case in orbital thermal analysis is the scenario where the satellite receives maximum heat input; correct identification requires surveying beta angles and solar distances across the year."
+    },
+    {
+      "Criterion": "The worst cold case is identified as the orbital day or period with minimum total incident flux.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Worst cold case is where the satellite receives minimum heat input, typically maximum eclipse or perihelion-minimizing geometry; correct identification is required by the prompt."
+    },
+    {
+      "Criterion": "The flux vs T plots show all six satellite faces on either a single plot per scenario or clearly labeled separate subplots.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt asks for flux on each face vs T, implying all six faces must be represented in each scenario plot.",
+      "Citation": "incident flux on each face of the satellite vs T"
+    },
+    {
+      "Criterion": "The flux vs T plots show eclipse regions where flux goes to zero during shadow passage.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A correct flux vs T plot for a LEO sun-synchronous orbit must show eclipse intervals where solar flux on illuminated faces drops to zero; absence indicates an incomplete or incorrect model."
+    },
+    {
+      "Criterion": "The flux vs T plots display the T axis over at least one complete orbital period.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A parametric analysis of flux vs orbital parameter T must span a full orbit to be meaningful as a boundary condition deliverable."
+    },
+    {
+      "Criterion": "The summary table in the thermal report includes the maximum incident flux value for each satellite face.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires max flux on each face in the summary table.",
+      "Citation": "max/min flux on each face"
+    },
+    {
+      "Criterion": "The summary table in the thermal report includes the minimum incident flux value for each satellite face.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires min flux on each face in the summary table.",
+      "Citation": "max/min flux on each face"
+    },
+    {
+      "Criterion": "The summary table in the thermal report includes the total incident solar flux on the satellite, Qsun.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly lists Qsun as a required parameter in the summary table.",
+      "Citation": "incident flux on the satellite (Qsun)"
+    },
+    {
+      "Criterion": "The summary table in the thermal report includes the eclipse angle (ec).",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly lists the eclipse angle ec as a required parameter in the summary table.",
+      "Citation": "eclipse angle (ec)"
+    },
+    {
+      "Criterion": "The summary table in the thermal report includes the beta angle.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly lists beta as a required parameter in the summary table.",
+      "Citation": "beta"
+    },
+    {
+      "Criterion": "The summary table in the thermal report includes view factors for the satellite faces.",
+      "Weight": 75,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly lists view factors as required parameters in the summary table.",
+      "Citation": "View factors"
+    },
+    {
+      "Criterion": "The summary table is presented for both the worst hot case and worst cold case scenarios separately.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt asks for key parameter values for worst case scenarios (plural), requiring the table to cover both hot and cold cases.",
+      "Citation": "Give the important parameter values ... for worst case scenarios"
+    },
+    {
+      "Criterion": "The beta angle value stated in the summary table is consistent with the beta angle used in the parametric flux equations.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Internal consistency check: the beta angle driving the flux model must match the beta angle reported in the summary table; inconsistency indicates a calculation error."
+    },
+    {
+      "Criterion": "The eclipse angle stated in the summary table is geometrically consistent with the orbital altitude and beta angle reported for that case.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Eclipse angle, orbital altitude, and beta angle are mathematically related; a correct thermal analysis must maintain consistency among these three parameters."
+    },
+    {
+      "Criterion": "The view factors in the summary table for Earth-facing and space-facing faces are distinct and reflect the satellite geometry relative to Earth.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "For a 10x10x10 cm cube in LEO, the face pointing nadir has a larger view factor to Earth than zenith and lateral faces; reporting identical view factors for all faces would indicate an error."
+    },
+    {
+      "Criterion": "The sum of view factors from any single satellite face to Earth and to deep space is less than or equal to 1.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "View factor reciprocity and completeness relations require that for any flat surface, the combined view factor to all surrounding surfaces cannot exceed 1; this is a fundamental domain constraint."
+    },
+    {
+      "Criterion": "The maximum flux value reported for any face does not exceed the solar constant (approximately 1414 W/m2 for closest Earth-Sun distance).",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The solar constant at 1 AU is approximately 1361 W/m2, peaking near 1414 W/m2 at perihelion; no face can receive more direct solar flux than this physical upper bound."
+    },
+    {
+      "Criterion": "The minimum incident flux on any face during an illuminated orbital phase is greater than zero.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "During the sunlit portion of an orbit, Earth IR and albedo always contribute a positive flux to all faces; a zero minimum outside eclipse indicates an incomplete model."
+    },
+    {
+      "Criterion": "The Qsun value in the summary table is consistent with the solar flux incident on the satellite's cross-sectional area facing the sun.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Qsun (total incident solar power) must be derivable from the projected area of the satellite facing the sun and the solar irradiance; the reported value must align with this calculation."
+    },
+    {
+      "Criterion": "The worst hot case corresponds to a positive beta angle condition where the sun is above the orbit plane, resulting in longer sunlit periods.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In sun-synchronous orbit, the worst hot case typically occurs at high positive beta angles where eclipse fraction decreases; the report must identify this condition correctly."
+    },
+    {
+      "Criterion": "The worst cold case corresponds to a condition with a long eclipse fraction, typically at or near zero beta angle.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In sun-synchronous orbit, maximum eclipse occurs near zero beta angle, producing the coldest thermal environment; the report must correctly identify this geometry."
+    },
+    {
+      "Criterion": "The parametric flux equations are dimensionally consistent, with coefficients and terms that produce units of W/m2.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Dimensional consistency is a fundamental correctness requirement; equations that mix units or produce wrong dimensions are professionally unusable."
+    },
+    {
+      "Criterion": "The parametric flux equations for opposite faces (such as +Z and -Z) sum to a value that does not exceed the total available flux input from the solar and Earth sources.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Energy conservation requires that the total flux distributed across all faces must not exceed total available incident power; inconsistency across opposite faces indicates modeling error."
+    },
+    {
+      "Criterion": "The flux vs T plots include labeled axes with T on the horizontal axis and incident flux in W/m2 on the vertical axis.",
+      "Weight": 40,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "Properly labeled axes are a minimum formatting requirement for a professional engineering plot; unlabeled plots are unusable by ABC Survey engineers."
+    },
+    {
+      "Criterion": "The flux vs T plots include a legend identifying which curve corresponds to which satellite face.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A legend is required when multiple faces are plotted together; without it, the curves cannot be distinguished and the plot is not usable as a thermal boundary condition."
+    },
+    {
+      "Criterion": "The summary table is formatted with clearly labeled columns identifying the parameter name, the worst hot case value, and the worst cold case value.",
+      "Weight": 40,
+      "Implicit or Explicit": 0,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "A professional engineering report table must have labeled columns so that ABC Survey engineers can extract correct values without ambiguity."
+    },
+    {
+      "Criterion": "The beta angle values reported in the summary table are within the physically possible range for a sun-synchronous orbit in 2028.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "For a sun-synchronous orbit, the beta angle varies within a bounded range determined by the inclination and solar declination; values outside this range indicate a calculation error."
+    },
+    {
+      "Criterion": "The eclipse angle (ec) reported in the summary table is expressed in degrees and falls within the range 0 to 90 degrees.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Eclipse angle is the half-angle of Earth's shadow cone as seen from the orbit; it is bounded between 0 and 90 degrees, and values outside this range indicate a definitional or computational error."
+    },
+    {
+      "Criterion": "The flux equations or accompanying text account for the variation in Earth-Sun distance throughout 2028 when computing solar irradiance.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Solar irradiance varies by approximately plus or minus 3.3% due to Earth's orbital eccentricity over a year; a complete parametric thermal analysis for all days in 2028 must address this variation."
+    },
+    {
+      "Criterion": "The thermal report applies orbital mechanics specific to sun-synchronous orbit, including the frozen repeat ground track or retrograde inclination near 97-98 degrees.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Sun-synchronous orbits have a characteristic retrograde inclination chosen to maintain a fixed sun angle; a report that treats the orbit as a generic circular orbit rather than acknowledging SSO-specific properties is incomplete."
+    },
+    {
+      "Criterion": "The thermal report does not contain placeholder text such as TBD, TODO, or INSERT VALUE HERE.",
+      "Weight": -60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Placeholder text in a deliverable submitted to ABC Survey indicates an incomplete analysis that is not ready for use as a thermal boundary condition."
+    },
+    {
+      "Criterion": "The incident flux equations for a satellite face that is always in shadow (never directly illuminated by the sun for a given beta angle) correctly assign zero solar flux to that face.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Depending on the beta angle, some faces of the satellite may receive no direct solar illumination during parts of the orbit; correctly zeroing solar contribution on those faces is a domain-critical correctness check."
+    },
+    {
+      "Criterion": "The summary table flux values for each face are consistent with the maximum values visually identifiable in the corresponding flux vs T plots.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Internal consistency: the max/min values in the summary table must match the peaks and troughs shown in the flux vs T plots; discrepancies would make the report internally contradictory."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+You review a task a fellow has just authored — the task prompt plus the
+attached input file(s). The model that takes this task will see both.
+Flag content in the input file(s) that lets the model do well by copying
+the input rather than doing the work the task is meant to test.
+
+What you receive below is the task prompt (as text) bundled with the
+attached input file(s). Treat the text as the prompt the developer will
+read; treat the attached file(s) as the input materials the fellow has
+provided. You cannot see the rubric. This is a smoke check — flag
+candidates the fellow should look at, not only things you are 100% sure
+about. The fellow can disagree and proceed.
+
+==========================
+THE CORE TEST
+==========================
+
+For any rule-shaped sentence in the input file(s), ask:
+
+   "Could a competent person doing this task reasonably argue for a
+    different choice?"
+
+If NO → company fact (e.g. our fee rate is 2.9%). Do not flag.
+If YES → engineering decision the developer should be making. Flag it.
+
+==========================
+PATTERNS TO FLAG
+==========================
+
+Please note that these are patterns that you're checking the input files for, not the prompt. Except for point 6. Input file answering questions the prompt poses, where you would have to take a look at the prompt too.
+
+1. Specific thresholds and tolerances on judgment-call topics.
+   Shape: "more than X should be flagged," "within X seconds,"
+   "deviation over X%." The number itself is the smoke — X could
+   defensibly be different.
+
+2. Classifications stated as fact.
+   "X is not an error." "Y is expected behavior." "Z is the source of
+   record." These pre-decide categorization the developer should decide.
+
+3. Pre-decomposed deliverables or output structure.
+   The input file naming the sections, modules, reports, fields, or
+   shape of the deliverable. Especially when the prompt also names them.
+   The developer should design the structure.
+
+4. Authority language attached to decisions.
+   "Authoritative." "Approved by [exec]." "Official." "Must." "Always."
+   "Never." When applied to a decision (not a factual constraint), the
+   voice itself tells the model not to use judgment.
+
+5. Numbered or sectioned rule lists.
+   R1, R2, R3... or §1, §2, §3... with one rule per section. This shape
+   maps cleanly to one-rubric-item-per-rule and is a strong leak signal.
+
+6. Input file answering questions the prompt poses.
+   If the prompt asks the model to decide, design, or handle ambiguity
+   around something, and the input already resolves it, flag the
+   resolving sentence. (You can see both here, so check directly.)
+
+7. Density of specific numbers on judgment calls.
+   Multiple specific numbers (thresholds, windows, tolerances) attached
+   to decisions. Each one becomes a binary "did the code use exactly
+   this number?" check.
+
+==========================
+DO NOT FLAG
+==========================
+
+- Company facts the model needs: rates, schemas, file layouts, column
+  meanings, real domain rules, business identifiers.
+- Raw data: transactions, logs, records, source documents.
+- Glossary, terminology, scope, time period, dates.
+- Background context framing the problem.
+- Anything in the prompt itself — only flag content inside the
+  attached input file(s).
+
+==========================
+CALIBRATION EXAMPLES
+==========================
+
+Do not flag (factual, the developer needs this):
+  "Our support team operates 9am-5pm Eastern, weekdays only."
+
+Flag (prescribed threshold):
+  "Tickets older than 4 hours must be escalated to tier 2."
+  → developer should decide an escalation policy.
+
+Flag (classification as fact):
+  "Customer complaints about shipping delays are not service failures."
+  → developer should decide how to classify these.
+
+Flag (pre-decomposed structure):
+  "The report should contain a summary section, an analysis section,
+   and a recommendations section."
+  → developer should design the structure.
+
+==========================
+OUTPUT
+==========================
+
+reasoning (internal — not shown to fellow):
+  Walk through what the input file(s) contain, which content reads as
+  fact vs. prescription, and any borderline calls. Apply the core test
+  explicitly for borderline items. Be candid.
+
+verdict ("passed" or "failed"):
+  "failed" if you found at least one problematic span in the input
+  file(s).
+  "passed" if the input file(s) are clean.
+
+feedback (fellow-facing string):
+  Empty string if passed. Otherwise a numbered list, one entry per
+  problematic span. Use this exact format:
+
+    Found N spots to look at:
+
+    1. "<exact quote from input file>"
+       <one sentence: what decision the input is handing to the
+        model>. <one sentence: what to change>.
+
+    2. "<exact quote>"
+       <issue>. <fix>.
+
+  Voice: short, concrete, no jargon. No hedging ("potentially," "may,"
+  "could"). Point and tell. Do not mention "rubric" or "leakage" — the
+  fellow does not need that framing. Quote text exactly as it appears
+  in the input file, including punctuation.
+
+==========================
+TASK (PROMPT + INPUT FILES)
+==========================
+{{prompt_and_input_file}}

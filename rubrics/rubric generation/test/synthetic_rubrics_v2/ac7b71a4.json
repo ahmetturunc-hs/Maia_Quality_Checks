@@ -1,0 +1,526 @@
+{
+  "items": [
+    {
+      "Criterion": "The legal memo identifies the issue as whether the court should grant or deny Principal's motion to transfer venue from the U.S. District Court for the Middle District of Florida to the U.S. District Court for the Eastern District of Michigan.",
+      "Weight": 80,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The IRAC format requires an Issue section, and the central issue is the venue transfer motion. A memo that misidentifies or omits the core issue is professionally unusable.",
+      "Citation": "Task prompt: IRAC format required; motion to transfer venue filed by Principal in August 2025."
+    },
+    {
+      "Criterion": "The legal memo identifies 28 U.S.C. § 1404(a) as the governing statute for the motion to transfer venue.",
+      "Weight": 90,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "28 U.S.C. § 1404(a) is the statutory basis for a motion to transfer venue for the convenience of parties and witnesses. Failing to identify this statute reflects a fundamental gap in the legal analysis.",
+      "Citation": "28 U.S.C. § 1404(a); ERISA venue transfer doctrine."
+    },
+    {
+      "Criterion": "The legal memo identifies 29 U.S.C. § 1132(e)(2) as the ERISA venue provision governing initial venue selection.",
+      "Weight": 90,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "29 U.S.C. § 1132(e)(2) is ERISA's special venue statute, which determines where an ERISA action may be brought. It is the threshold venue rule that must be applied before the § 1404(a) convenience analysis.",
+      "Citation": "29 U.S.C. § 1132(e)(2); ERISA venue law."
+    },
+    {
+      "Criterion": "The legal memo states that under 29 U.S.C. § 1132(e)(2), venue in an ERISA action is proper where the plan is administered, where a breach took place, or where a defendant resides or may be found.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "ERISA's broad venue provision has three alternative bases. A complete legal analysis must enumerate all three to assess whether the Middle District of Florida is a proper venue.",
+      "Citation": "29 U.S.C. § 1132(e)(2)."
+    },
+    {
+      "Criterion": "The legal memo concludes that venue is proper in the Middle District of Florida under 29 U.S.C. § 1132(e)(2) because Principal's regional claims office in Jacksonville, Florida was involved in administering Jared's claim.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Jacksonville, Florida falls within the Middle District of Florida. Principal's regional claims office there participated in plan administration, satisfying the 'where administered' or 'where a defendant may be found' prong of § 1132(e)(2). This is the critical factual hook tying venue to the Middle District.",
+      "Citation": "29 U.S.C. § 1132(e)(2); task prompt fact: Principal's regional claims office in Jacksonville, Florida was involved in administering Jared's claim."
+    },
+    {
+      "Criterion": "The legal memo applies the § 1404(a) convenience factors to the specific facts of Jared's case after establishing that venue in the Middle District of Florida is proper.",
+      "Weight": 85,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A § 1404(a) transfer analysis requires first that the original venue is proper, then a weighing of convenience factors. Jumping straight to convenience without confirming proper venue, or vice versa, reflects an incomplete ERISA venue analysis.",
+      "Citation": "28 U.S.C. § 1404(a); Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo discusses that the movant (Principal) bears the burden of demonstrating that transfer is warranted under § 1404(a).",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Under 11th Circuit law, the party moving for transfer under § 1404(a) bears the burden of showing that transfer is warranted. Omitting this allocation of burden reflects an incomplete recitation of the applicable rule.",
+      "Citation": "In re Ricoh Corp., 870 F.2d 570 (11th Cir. 1989); Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo cites Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005) in connection with the § 1404(a) transfer analysis.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Manuel v. Convergys Corp. is the leading 11th Circuit precedent on § 1404(a) transfer factors and is binding authority on courts in the Middle District of Florida. Failing to cite it is a meaningful gap in legal analysis.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo identifies Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005) as binding authority on the court.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires the memo to identify whether cited case law is persuasive or binding. An 11th Circuit decision is binding on a district court in the Middle District of Florida.",
+      "Citation": "Task prompt instruction 1: identify whether case law authority is persuasive or binding."
+    },
+    {
+      "Criterion": "The legal memo cites In re Ricoh Corp., 870 F.2d 570 (11th Cir. 1989) in connection with the movant's burden or the § 1404(a) standard.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In re Ricoh Corp. is the foundational 11th Circuit case establishing that the movant bears the burden under § 1404(a). It is binding authority and expected to appear in any thorough ERISA venue memo.",
+      "Citation": "In re Ricoh Corp., 870 F.2d 570 (11th Cir. 1989)."
+    },
+    {
+      "Criterion": "The legal memo identifies In re Ricoh Corp., 870 F.2d 570 (11th Cir. 1989) as binding authority on the court.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires identifying whether cited authorities are persuasive or binding. In re Ricoh Corp. is an 11th Circuit decision and therefore binding on the Middle District of Florida.",
+      "Citation": "Task prompt instruction 1: identify whether case law authority is persuasive or binding."
+    },
+    {
+      "Criterion": "The legal memo discusses the convenience of witnesses as a § 1404(a) factor and applies it to the facts of Jared's case.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Convenience of witnesses is typically the most important § 1404(a) factor. Jared's treating physicians are all located in Michigan, which is directly relevant to this factor.",
+      "Citation": "28 U.S.C. § 1404(a); Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005); task prompt fact: all treating doctors are in Detroit, Michigan."
+    },
+    {
+      "Criterion": "The legal memo recognizes that in ERISA benefit denial cases, the administrative record governs and the live testimony of treating physicians is typically not a significant § 1404(a) witness convenience factor.",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A key nuance in ERISA cases is that review is usually limited to the administrative record, meaning the location of witnesses carries less weight than in non-ERISA litigation. A sophisticated memo must address this distinction to properly analyze the convenience factor.",
+      "Citation": "Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013); Mendiola v. Home Depot, No. 8:20-cv-1561 (M.D. Fla. 2020)."
+    },
+    {
+      "Criterion": "The legal memo discusses the convenience of the parties as a § 1404(a) factor and applies it to Jared's case.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Convenience of the parties is one of the enumerated § 1404(a) factors. The parties here are spread across multiple states (Michigan, Iowa, Florida), so this factor requires analysis.",
+      "Citation": "28 U.S.C. § 1404(a); task prompt facts regarding party locations."
+    },
+    {
+      "Criterion": "The legal memo discusses the interest of justice as a § 1404(a) factor.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The interest of justice is one of the three primary § 1404(a) factors and must be addressed in a complete venue transfer analysis.",
+      "Citation": "28 U.S.C. § 1404(a); Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo discusses the plaintiff's choice of forum as a factor weighing against transfer.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A plaintiff's choice of forum is generally entitled to deference and weighs against transfer under § 1404(a). The Partner filed in the Middle District of Florida, and Principal's motion to transfer must overcome this presumption.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005); In re Ricoh Corp., 870 F.2d 570 (11th Cir. 1989)."
+    },
+    {
+      "Criterion": "The legal memo analyzes the significance of Jared not residing in the chosen forum (Middle District of Florida) when assessing the weight given to the plaintiff's forum choice.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Under 11th Circuit precedent, a plaintiff's forum choice receives less deference when the plaintiff does not reside in the chosen forum. Since Jared resides in Michigan, not Florida, the Middle District of Florida's chosen-forum weight may be diminished.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005); task prompt: Jared resides in Detroit, Michigan."
+    },
+    {
+      "Criterion": "The legal memo analyzes the location where Principal's claims decisions were made (Minnesota, California, Iowa, and Florida) in the context of where the claim was administered or where a breach occurred.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The ERISA venue and § 1404(a) analysis must account for where plan administration occurred. The scattered claims offices (Minnesota, California, Iowa, and Florida) are directly relevant to the 'where administered' venue prong and to the locus of operative facts.",
+      "Citation": "29 U.S.C. § 1132(e)(2); task prompt facts regarding Principal's Minnesota, California, Iowa, and Florida offices."
+    },
+    {
+      "Criterion": "The legal memo discusses the locus of operative facts as a § 1404(a) sub-factor and identifies the relevant locations from the facts of Jared's case.",
+      "Weight": 70,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The locus of operative facts (where the claims decisions were made, where the claimant resides, where the plan is administered) is a sub-factor under the broader interest-of-justice inquiry and affects the proper venue analysis.",
+      "Citation": "Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013); Mendiola v. Home Depot, No. 8:20-cv-1561 (M.D. Fla. 2020)."
+    },
+    {
+      "Criterion": "The legal memo cites at least one district court decision from Florida applying § 1404(a) in the ERISA disability benefits context.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "District court decisions from the same or nearby district provide persuasive authority directly on point. Citing at least one such decision demonstrates thorough research in the ERISA LTD venue context.",
+      "Citation": "Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013); Mendiola v. Home Depot, No. 8:20-cv-1561 (M.D. Fla. 2020); Williams v. Unum Life, No. 24-CV-24113-RAR (S.D. Fla. 2025)."
+    },
+    {
+      "Criterion": "The legal memo identifies any district court decisions cited from within Florida as persuasive rather than binding authority.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires the memo to distinguish persuasive from binding authority. District court decisions, even from the same circuit, are persuasive authority on other district courts.",
+      "Citation": "Task prompt instruction 1: identify whether case law authority is persuasive or binding."
+    },
+    {
+      "Criterion": "The legal memo analyzes whether Principal's motion to transfer should be denied, concluding with a clear recommendation on how the court should rule.",
+      "Weight": 85,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The Partner asked for advice on how the court should rule on Defendants' motion. A memo that does not reach a conclusion on the merits of the motion fails the primary purpose of the assignment.",
+      "Citation": "Task prompt: 'advising him on how the Court should rule on Defendants' motion to transfer venue.'"
+    },
+    {
+      "Criterion": "The legal memo's conclusion on the transfer motion is supported by the analysis in the Analysis section.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Internal consistency between analysis and conclusion is a core quality marker for any legal memo. A conclusion that contradicts or is unsupported by the preceding analysis is professionally unacceptable.",
+      "Citation": "IRAC format; standard legal memo drafting practice."
+    },
+    {
+      "Criterion": "The legal memo notes that the LTD Plan contains no venue selection clause.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly instructs the drafter to assume no venue selection clause exists in the LTD Plan. This assumption must be reflected in the memo because the presence or absence of a forum-selection clause significantly affects the § 1404(a) analysis.",
+      "Citation": "Task prompt instruction 1(i): assume there is no venue selection clause in the LTD Plan."
+    },
+    {
+      "Criterion": "The legal memo discusses how the absence of a venue selection clause affects the § 1404(a) analysis.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "When a forum-selection clause is absent, the court applies ordinary § 1404(a) balancing without any contractual thumb on the scale. A memo must affirmatively address this point because the absence is a material legal fact.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005); task prompt instruction 1(i)."
+    },
+    {
+      "Criterion": "The legal memo identifies HC Hospitals as the plan sponsor and identifies Principal Financial Group as the insurer of the LTD Plan.",
+      "Weight": 50,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "Accurate identification of the parties and their roles is foundational to the memo. The facts are stated verbatim in the task prompt.",
+      "Citation": "Task prompt facts: HC provides LTD benefits; Principal insures the LTD Plan."
+    },
+    {
+      "Criterion": "The legal memo identifies both Principal Financial Group and HC Hospitals as defendants in the ERISA action.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "Both Principal and HC are defendants in the filed action. The memo must accurately reflect the party structure, which is material to the venue analysis under § 1132(e)(2)'s 'where defendant resides or may be found' prong.",
+      "Citation": "Task prompt: 'filed an ERISA action ... against Principal and HC.'"
+    },
+    {
+      "Criterion": "The legal memo discusses HC Hospitals' headquarters or state of residence as relevant to the § 1132(e)(2) 'where defendant may be found' venue analysis.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The 'where a defendant may be found' prong of § 1132(e)(2) requires considering all defendants' locations. HC Hospitals' location is relevant to the completeness of the venue analysis.",
+      "Citation": "29 U.S.C. § 1132(e)(2); task prompt facts."
+    },
+    {
+      "Criterion": "The legal memo notes that Principal is headquartered in Des Moines, Iowa.",
+      "Weight": 45,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "Principal's Iowa headquarters is a verbatim fact from the task prompt material to the venue analysis, particularly for the § 1132(e)(2) defendant-residence prong.",
+      "Citation": "Task prompt: 'Principal is headquartered in Des Moines, Iowa.'"
+    },
+    {
+      "Criterion": "The legal memo addresses the relative ease of access to sources of proof as a § 1404(a) sub-factor.",
+      "Weight": 60,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Access to sources of proof is a recognized § 1404(a) sub-factor. In ERISA cases, the administrative record is typically the key source of proof and its location is relevant to this sub-factor.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005); Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013)."
+    },
+    {
+      "Criterion": "The legal memo discusses the relative financial ability of the parties to litigate in the chosen forum as a § 1404(a) consideration.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The financial resources of the parties is a recognized sub-factor under the § 1404(a) interest-of-justice inquiry. A large insurer such as Principal litigating against an individual claimant is a relevant asymmetry.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo notes that the ERISA action was filed in July 2025 in the U.S. District Court for the Middle District of Florida.",
+      "Weight": 40,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "The filing date and court are verbatim facts from the task prompt. Accurate recitation of the procedural posture is part of a complete legal memo.",
+      "Citation": "Task prompt: 'filed an ERISA action in July 2025 ... in the U.S. District Court for the Middle District of Florida.'"
+    },
+    {
+      "Criterion": "The legal memo notes that Principal's motion to transfer was filed in August 2025.",
+      "Weight": 35,
+      "Implicit or Explicit": 1,
+      "Category": 3,
+      "Verification Type": 0,
+      "Rationale": "The filing date of the motion to transfer is a verbatim fact from the task prompt and part of the procedural background of the memo.",
+      "Citation": "Task prompt: 'In August 2025, Principal filed a motion to transfer venue.'"
+    },
+    {
+      "Criterion": "The legal memo uses Bluebook citation format for all cited legal authorities.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires Bluebook citation format. Failure to follow Bluebook is a direct violation of an explicit formatting requirement.",
+      "Citation": "Task prompt: 'Blue book citation format must be used.'"
+    },
+    {
+      "Criterion": "The legal memo is organized using the IRAC format with an Issue section present.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires IRAC format. The Issue section is the first required component.",
+      "Citation": "Task prompt: 'follow the IRAC format (Issue, Rule, Analysis, Conclusion).'"
+    },
+    {
+      "Criterion": "The legal memo is organized using the IRAC format with a Rule section present.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires IRAC format. The Rule section is the second required component.",
+      "Citation": "Task prompt: 'follow the IRAC format (Issue, Rule, Analysis, Conclusion).'"
+    },
+    {
+      "Criterion": "The legal memo is organized using the IRAC format with an Analysis section present.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires IRAC format. The Analysis section is the third required component and typically the longest.",
+      "Citation": "Task prompt: 'follow the IRAC format (Issue, Rule, Analysis, Conclusion).'"
+    },
+    {
+      "Criterion": "The legal memo is organized using the IRAC format with a Conclusion section present.",
+      "Weight": 65,
+      "Implicit or Explicit": 1,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly requires IRAC format. The Conclusion section is the fourth required component.",
+      "Citation": "Task prompt: 'follow the IRAC format (Issue, Rule, Analysis, Conclusion).'"
+    },
+    {
+      "Criterion": "The IRAC section headings are both bolded and underlined.",
+      "Weight": 40,
+      "Implicit or Explicit": 1,
+      "Category": 2,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly specifies bolded and underlined headings. Omitting either element violates an explicit formatting requirement.",
+      "Citation": "Task prompt: 'bolded/underlined headings.'"
+    },
+    {
+      "Criterion": "The legal memo is addressed to the Partner.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly states the memo should be addressed to the Partner. Failure to address the memo correctly violates an explicit instruction.",
+      "Citation": "Task prompt: 'The memo should be addressed to the Partner.'"
+    },
+    {
+      "Criterion": "The legal memo is written in a neutral, objective tone rather than an advocacy tone.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the memo to be drafted in a neutral, objective manner. An advocacy-style memo advising the Partner would fail this requirement.",
+      "Citation": "Task prompt: 'drafted in a neutral, objective manner.'"
+    },
+    {
+      "Criterion": "The legal memo does not exceed four pages in length.",
+      "Weight": 55,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt sets an explicit four-page maximum. A memo exceeding this limit violates an explicit constraint.",
+      "Citation": "Task prompt: 'The memorandum should be four pages or less.'"
+    },
+    {
+      "Criterion": "The legal memo is presented as a PDF document.",
+      "Weight": 20,
+      "Implicit or Explicit": 1,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "The task prompt explicitly requires the memo to be in PDF format. This is a trivially easy formatting constraint any model should satisfy.",
+      "Citation": "Task prompt: 'four pages or less in a pdf document.'"
+    },
+    {
+      "Criterion": "The legal memo analyzes whether the administrative record review standard applicable in ERISA cases limits the practical significance of witness locations in the § 1404(a) convenience analysis.",
+      "Weight": 75,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "In ERISA benefit denial cases subject to arbitrary and capricious review, courts review the administrative record rather than take live testimony. This significantly limits the weight of witness convenience in the § 1404(a) analysis and is a key point that distinguishes ERISA cases from general civil litigation.",
+      "Citation": "Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013); Mendiola v. Home Depot, No. 8:20-cv-1561 (M.D. Fla. 2020)."
+    },
+    {
+      "Criterion": "The legal memo identifies the standard of review applicable to Principal's benefit determination (arbitrary and capricious or de novo) as part of the ERISA analysis context.",
+      "Weight": 55,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The ERISA review standard (which depends on whether the plan grants discretionary authority to the administrator) affects the nature of the evidence that will be presented and therefore bears on the § 1404(a) witness and access-to-proof analysis.",
+      "Citation": "Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013)."
+    },
+    {
+      "Criterion": "The legal memo discusses the fact that Jared's treating physicians and medical evidence are located in Michigan when analyzing the convenience of witnesses factor.",
+      "Weight": 70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The task prompt states that all treating doctors are in Detroit, Michigan. This is a key fact in the witness-convenience analysis even if, in ERISA cases, live testimony is typically not permitted.",
+      "Citation": "Task prompt: 'All of Jared's treating doctors certifying his LTD claim are also in the Detroit, Michigan area.'"
+    },
+    {
+      "Criterion": "The legal memo discusses the fact that Jared resides in Detroit, Michigan as relevant to the convenience-of-parties factor.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Jared's Michigan residence is directly relevant to the § 1404(a) party-convenience factor and weighs in favor of transfer to the Eastern District of Michigan.",
+      "Citation": "Task prompt: 'Jared still lives in Detroit, Michigan.'"
+    },
+    {
+      "Criterion": "The legal memo discusses that the LTD Plan provides for one level of administrative appeal review and that no further administrative appeals were pursued.",
+      "Weight": 45,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The exhaustion of administrative remedies is part of the procedural posture of the ERISA action. This fact establishes that the case is ripe for federal court review and is relevant context for the memo.",
+      "Citation": "Task prompt: 'The LTD Plan provides for one level of administrative appeal review'; the Partner 'determined not to file any further administrative appeals.'"
+    },
+    {
+      "Criterion": "The legal memo weighs Principal's scattered claims processing locations (Minnesota, California, Iowa, Florida) against a finding that the locus of operative facts favors transfer to Michigan.",
+      "Weight": 65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Because claims decisions were made in multiple states (Minnesota, California, Iowa, and Florida), it would be difficult for Principal to argue that the Eastern District of Michigan is uniquely the locus of operative facts, which cuts against transfer.",
+      "Citation": "Task prompt facts; Kelling v. Hartford Life, 961 F. Supp. 2d 1216 (M.D. Fla. 2013)."
+    },
+    {
+      "Criterion": "The legal memo discusses the availability of compulsory process for witnesses as a § 1404(a) sub-factor.",
+      "Weight": 50,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Availability of compulsory process is one of the recognized § 1404(a) sub-factors enumerated in the 11th Circuit. Its inclusion demonstrates thoroughness in the factor analysis.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo discusses the practical difficulties of trial in the chosen forum as a § 1404(a) sub-factor.",
+      "Weight": 45,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Practical difficulties, including administrative and docket considerations, are part of the § 1404(a) interest-of-justice inquiry recognized by the 11th Circuit.",
+      "Citation": "Manuel v. Convergys Corp., 430 F.3d 1132 (11th Cir. 2005)."
+    },
+    {
+      "Criterion": "The legal memo reaches a balanced conclusion reflecting that while some factors favor transfer (Jared's Michigan residence, location of treating physicians), other factors cut against transfer (plaintiff's choice of forum, Principal's Jacksonville office, scattered locus of claims administration).",
+      "Weight": 80,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "A neutral, objective memo must acknowledge the competing considerations rather than one-sidedly favoring one outcome. The facts present genuine tension between the § 1404(a) factors.",
+      "Citation": "Task prompt requirement of neutral, objective drafting."
+    },
+    {
+      "Criterion": "The legal memo does not contain placeholder text such as 'TBD,' 'insert here,' or '[client name]' in lieu of substantive content.",
+      "Weight": -60,
+      "Implicit or Explicit": 0,
+      "Category": 1,
+      "Verification Type": 0,
+      "Rationale": "A professional legal memo submitted to a supervising partner must be complete. Placeholder text indicates the deliverable was not finished.",
+      "Citation": "Standard professional legal memo requirements."
+    },
+    {
+      "Criterion": "The legal memo does not misidentify the Middle District of Florida as a different federal district court.",
+      "Weight": -70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The action was filed in the Middle District of Florida. Misidentifying the forum district is a factual error that undermines the entire venue analysis.",
+      "Citation": "Task prompt: 'U.S. District Court for the Middle District of Florida.'"
+    },
+    {
+      "Criterion": "The legal memo does not misidentify the Eastern District of Michigan as the district where the current action is pending.",
+      "Weight": -70,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Principal's motion seeks transfer to the Eastern District of Michigan; the action is currently pending in the Middle District of Florida. Confusing the current and proposed forums fatally undermines the legal analysis.",
+      "Citation": "Task prompt: action filed in Middle District of Florida; Principal seeks transfer to Eastern District of Michigan."
+    },
+    {
+      "Criterion": "The legal memo does not assert that a venue selection clause in the LTD Plan controls the venue analysis.",
+      "Weight": -80,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt explicitly instructs the drafter to assume no venue selection clause exists. A memo that invents and applies a forum-selection clause directly contradicts the stated assumption.",
+      "Citation": "Task prompt instruction 1(i): assume there is no venue selection clause."
+    },
+    {
+      "Criterion": "The legal memo does not treat district court decisions as binding authority on the Middle District of Florida.",
+      "Weight": -65,
+      "Implicit or Explicit": 0,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "The prompt requires identification of persuasive vs. binding authority. Treating a district court decision as binding would be a legal error that a supervising partner would immediately notice.",
+      "Citation": "Task prompt instruction 1: identify whether authority is persuasive or binding."
+    },
+    {
+      "Criterion": "The legal memo addresses both defendants (Principal Financial Group and HC Hospitals) in the venue analysis rather than only one defendant.",
+      "Weight": 60,
+      "Implicit or Explicit": 1,
+      "Category": 0,
+      "Verification Type": 0,
+      "Rationale": "Both Principal and HC are defendants. A venue analysis that ignores one defendant is incomplete because § 1132(e)(2) looks at where any defendant resides or may be found.",
+      "Citation": "29 U.S.C. § 1132(e)(2); task prompt: action filed against 'Principal and HC.'"
+    }
+  ]
+}
